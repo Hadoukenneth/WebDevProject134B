@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="description" content="Discover and Share Movies">
+    <meta name="author" content="CSE 134B TEAM">
+    <title>MovieDex | My Profile</title>
+    <style>
+      #watchlists{
+        overflow: hidden;
+      }
+
+      #watchlists .movielist{
+        float: left;
+        width: 290px;
+        margin-right: 100px;
+      }
+
+      #watchlists .posterList{
+        list-style: none;
+      }
+
+      #watchlists .posterList .poster{
+        margin-right: -150px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        box-shadow: 1px 0 5px black;
+        float: left;
+      }
+
+      #watchlists .posterList .poster img{
+        display: block;
+        border-radius: 4px;
+      }
+
+      #watchlists #first{
+        z-index: 15;
+      }
+
+      #watchlists #nth{
+        z-index: 14;
+      }
+    </style>
+  </head>
+  <body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">MovieDex</a></li>
+      <li><a href="explore.html">explore</a></li>
+      <li><a href="team.html">team</a></li>
+      <li><a href="profile.html">profile</a></li>
+      <li><a href="#signout">settings</a>
+        <ul>
+          <li><a id="signout" href="login.html">sign out</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+
+  <div id="profile">
+    <div id="content">
+      <h1>Thomas Powell</h1>
+      <section id="recommended">
+        <h1>Recommended Movies</h1>
+        <hr>
+        <table>
+          <tr>
+            <td><a href="#"><img src="http://www.hollywoodreporter.com/sites/default/files/custom/Blog_Images/avengers-movie-poster-1.jpg" width="200" height="300"></a></td>
+            <td><a href="#"><img src="https://s-media-cache-ak0.pinimg.com/736x/fd/5e/66/fd5e662dce1a3a8cd192a5952fa64f02.jpg" width="200" height="300"></a></td>
+            <td><a href="#"><img id="first" src="https://s-media-cache-ak0.pinimg.com/originals/58/64/1c/58641cdae8838f54413259c7feb73df5.jpg" width="200" height="300"></a></td>
+            <td><a href="#"><img id="nth" src="http://i.imgur.com/vyaDghc.jpg" width="200" height="300"></a></td>
+          </tr>
+        </table>
+      </section>
+      <section id="watchlists">
+        <h1>Watchlists</h1>
+        <hr>
+        <section class="movielist">
+          <a href="#">
+            <div class="listStacked">
+              <ul class="posterList">
+                <li class="poster"><img id="first" src="https://s-media-cache-ak0.pinimg.com/originals/58/64/1c/58641cdae8838f54413259c7feb73df5.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="nth" src="https://sammigunner2.files.wordpress.com/2010/09/charlie-st-cloud-movie-poster-1020549398.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="first" src="http://www.movienewz.com/img/films/unbroken_movie_poster.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="nth" src="https://s-media-cache-ak0.pinimg.com/736x/fd/5e/66/fd5e662dce1a3a8cd192a5952fa64f02.jpg" width="200" height="300"></li>
+              </ul>
+            </div>
+          </a>
+          <h3>Dramas</h3>
+        </section>
+        <section class="movielist">
+          <a href="#">
+            <div class="listStacked">
+              <ul class="posterList">
+                <li class="poster"><img id="first" src="https://s-media-cache-ak0.pinimg.com/originals/12/dc/35/12dc35e24efdfa9e53a6f94ebb39ea2a.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="nth" src="https://s-media-cache-ak0.pinimg.com/736x/64/f4/07/64f40735cb2012cc3fd5cc8fca011369.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="nth" src="https://s-media-cache-ak0.pinimg.com/originals/e8/4b/5e/e84b5eca11ddfa3875d2530399355104.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="nth" src="http://imgc.allpostersimages.com/images/P-473-488-90/70/7086/F1HV100Z/posters/disney-pixar-s-finding-nemo-movie-poster.jpg" width="200" height="300"></li>
+              </ul>
+            </div>
+          </a>
+          <h3>Happiest Place on Earth!</h3>
+        </section>
+        <section class="movielist">
+          <a href="#">
+            <div class="listStacked">
+              <ul class="posterList">
+                <li class="poster"><img id="first" src="http://www.hollywoodreporter.com/sites/default/files/custom/Blog_Images/avengers-movie-poster-1.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="nth" src="http://i.imgur.com/vyaDghc.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="nth" src="http://graphicdesignjunction.com/wp-content/uploads/2011/12/grey-movie-poster.jpg" width="200" height="300"></li>
+                <li class="poster"><img id="nth" src="http://themovieblog.com/wp-content/uploads/2015/08/02-10-Of-The-Best-Action-Movie-Posters.jpg" width="200" height="300"></li>
+              </ul>
+            </div>
+          </a>
+          <h3>Action Movies</h3>
+        </section>
+      </section>
+      <section id="friends">
+        <h1>Friends</h1>
+        <hr>
+        <ul>
+          <li>Chau Lucky Nguyen</li>
+          <li>Kenneth Vu</li>
+          <li>Ryan Weng</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright MovieDex 2017</p>
+  </footer>
+
+  </body>
+</html>
