@@ -35,7 +35,7 @@
 }
 
 #loginLeft{
-  padding-top: 100px;
+  padding: 90px 0 50px;
 }
 
 #stackedPhones{
@@ -160,4 +160,51 @@ footer{
     padding-top: 100px;
   }
 
+}
+
+/* Profile Page */
+
+#profileBanner{
+  width: 100%;
+  background-color: #015267;
+  padding: 50px
+}
+
+#recommended{
+  padding: 50px 0px;
+}
+#watchlists{
+  overflow: hidden;
+}
+
+#watchlists .movielist{
+  float: left;
+  width: 290px;
+  margin-right: 100px;
+}
+
+#watchlists .posterList{
+  list-style: none;
+}
+
+#watchlists .posterList .poster{
+  margin-right: -150px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 1px 0 5px black;
+  float: left;
+}
+
+#watchlists .posterList .poster img{
+  display: block;
+  border-radius: 4px;
+}
+
+#watchlists .first{
+  z-index: 15;
+}
+
+#watchlists .nth{
+  z-index: 14;
 }

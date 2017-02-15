@@ -3,64 +3,22 @@
 <head>
   <meta name="description" content="Discover and Share Movies">
   <meta name="author" content="CSE 134B TEAM">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
   <title>MovieDex | My Profile</title>
-  <style>
-    #watchlists{
-      overflow: hidden;
-    }
-
-    #watchlists .movielist{
-      float: left;
-      width: 290px;
-      margin-right: 100px;
-    }
-
-    #watchlists .posterList{
-      list-style: none;
-    }
-
-    #watchlists .posterList .poster{
-      margin-right: -150px;
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
-      box-shadow: 1px 0 5px black;
-      float: left;
-    }
-
-    #watchlists .posterList .poster img{
-      display: block;
-      border-radius: 4px;
-    }
-
-    #watchlists .first{
-      z-index: 15;
-    }
-
-    #watchlists .nth{
-      z-index: 14;
-    }
-  </style>
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="home.html">MovieDex</a></li>
-      <li><a href="explore.html">explore</a></li>
-      <li><a href="profile.html">profile</a></li>
-      <li>settings
-        <ul>
-          <li><a id="signout" href="index.html">sign out</a></li>
-          <li><a id="back" href="../index.html">back to directory</a></li>
-        </ul>
-      </li>
-    </ul>
+  <nav id="navRibbon">
+    MovieDex
   </nav>
-
+  
   <div id="profile">
-    <h1>Thomas Powell</h1>
+    <section id="profileBanner">
+      <h1>Thomas Powell</h1>
+    </section>
     <!-- Recommended -->
     <section id="recommended">
       <h2>Recommended Movies</h2>
@@ -115,16 +73,6 @@
         </a>
         <h3>Action Movies</h3>
       </section>
-    </section>
-    <!-- Friends -->
-    <section id="friends">
-      <h2>Friends</h2>
-      <hr>
-      <ul>
-        <li>Chau Lucky Nguyen</li>
-        <li>Kenneth Vu</li>
-        <li>Ryan Weng</li>
-      </ul>
     </section>
   </div>
 
