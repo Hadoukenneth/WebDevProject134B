@@ -1,0 +1,163 @@
+/* Login Page */
+#loginPage{
+  background-color: #A2A79E;
+}
+
+#navRibbon{
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  padding-left: 0;
+  line-height: 60px;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #191A1F;
+  z-index: 999;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+#loginWrapper{
+  text-align: center;
+  padding: 0;
+}
+
+#loginWrapper > section{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 50px;
+  width: 300px;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+#loginLeft{
+  padding-top: 100px;
+}
+
+#stackedPhones{
+  list-style: none;
+}
+
+#stackedPhones .phones{
+  margin-right: -230px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  float: left;
+}
+
+#stackedPhones .phones img {
+  display: block;
+  border-radius: 4px;
+}
+
+#stackedPhones .phones img#first{
+  z-index: 999999;
+}
+
+#loginRight h1,
+#loginRight h3{
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 0px;
+}
+
+#loginRight h1{
+  font-size: 1.5em;
+}
+
+#loginRight h3{
+  font-size: 1em;
+  padding-bottom: 10px;
+  font-weight: lighter;
+}
+
+#loginForm label{
+  display: inline-block;
+  float: left;
+  width: 13%;
+  padding: 5px 0px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-right: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#loginForm input[type="text"]{
+  width: 77%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  float: left;
+  clear: right;
+  height: 41px;
+  margin-bottom: 12px;
+  padding: 0px 15px;
+  font-size: 15px;
+  background-color: transparent;
+  border-bottom: 1.5px solid #FFFFFF;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+#loginForm input[type="text"]:hover,
+#loginForm input[type="text"]:focus{
+  border-bottom: 1.5px solid #FFD700;
+  outline: none;
+}
+
+#loginForm input[type="submit"]{
+  border: 1px solid transparent;
+  display: inline-block;
+  height: 45px;
+  padding: 0px 15px;
+  width: 48.5%;
+  background-color: #015267;
+  color: #FFFFFF;
+  line-height: 45px;
+  margin-top: 15px;
+}
+
+#loginForm input[type="submit"]:hover{
+  border: 1px solid #FFD700;
+}
+
+#loginForm #loginBtn{
+  background-color: #44929F;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #191A1F;
+  color: #FFFFFF;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px){
+
+  #loginWrapper > section{
+    margin: 50px 0;
+  }
+
+  #loginLeft{
+    display: none !important;
+  }
+
+  #loginRight{
+    padding-top: 100px;
+  }
+
+}
