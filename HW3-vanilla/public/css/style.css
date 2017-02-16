@@ -163,24 +163,96 @@ footer{
 }
 
 /* Profile Page */
+#profilePage{
+  background-color: #A2A79E;
+  margin: 0px;
+}
+
+#profile{
+  width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
 
 #profileBanner{
   width: 100%;
   background-color: #015267;
-  padding: 50px
+  padding: 50px 0px;
+  margin-top: 60px;
+  color: #FFFFFF;
+  text-align: center;
+
+  box-sizing: border-box;
+  padding-left: 0;
 }
 
-#recommended{
-  padding: 50px 0px;
+#tabSections ul{
+  list-style: none;
+  border-bottom: 1px solid #191A1F;
+  -webkit-padding-start: 0px !important;
 }
+
+#tabSections ul li{
+  display: inline-block;
+  padding-right: 15px;
+}
+
+#tabSections ul li a{
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #191A1F;
+}
+
+#tabSections ul li a.active{
+  color: #FFD700;
+  border-bottom: 1px solid #FFD700;
+}
+
+#favorite,
+#recommended,
+#watchlists{
+  padding: 0px 0px 100px;
+}
+
+#recommendedList{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -40px;
+}
+
+#recommendedList .recListItem{
+  display: block;
+}
+
+#recommendedList .recListItem a{
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.singleMovie{
+  border: 2px solid black;
+  box-shadow: 2px 0 2px black;
+  border-radius: 2px;
+}
+
+.singleMovie:hover{
+  border: 2px solid #FFD700;
+}
+
 #watchlists{
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
 }
 
 #watchlists .movielist{
   float: left;
   width: 290px;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 #watchlists .posterList{
@@ -188,7 +260,7 @@ footer{
 }
 
 #watchlists .posterList .poster{
-  margin-right: -150px;
+  margin-right: -100px;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -201,10 +273,7 @@ footer{
   border-radius: 4px;
 }
 
-#watchlists .first{
-  z-index: 15;
-}
-
-#watchlists .nth{
-  z-index: 14;
+#watchlists h3{
+  text-align: center;
+  width: 100%;
 }
