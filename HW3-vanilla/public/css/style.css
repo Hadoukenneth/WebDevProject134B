@@ -1,4 +1,4 @@
-/* Login Page */
+/* Login Page - Lucky */
 #loginPage{
   background-color: #A2A79E;
 }
@@ -131,79 +131,73 @@
   background-color: #44929F;
 }
 
-footer{
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #191A1F;
-  color: #FFFFFF;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 13px;
-  font-family: 'Open Sans', sans-serif;
-  box-sizing: border-box;
-}
-
-@media screen and (max-width: 768px){
-
-  #loginWrapper > section{
-    margin: 50px 0;
-  }
-
-  #loginLeft{
-    display: none !important;
-  }
-
-  #loginRight{
-    padding-top: 100px;
-  }
-
-}
-
-/* Profile Page */
+/* Profile Page - Lucky */
 #profilePage{
   background-color: #A2A79E;
   margin: 0px;
 }
 
-#profile{
-  width: 1000px;
-  padding: 0 20px;
+#profileWrapper{
+  padding: 0 100px;
   margin: 0 auto;
 }
 
 #profileBanner{
   width: 100%;
-  background-color: #015267;
-  padding: 50px 0px;
+  background-color: #44929F;
+  padding: 20px 0px;
   margin-top: 60px;
-  color: #FFFFFF;
-  text-align: center;
-
   box-sizing: border-box;
   padding-left: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-#tabSections ul{
+#profilePicture{
+  margin-right: 30px;
+  float: left;
+}
+
+#circle{
+  border-radius: 50%;
+  border: 4px solid #FFFFFF;
+  width: 200px;
+  height: 200px;
+  background-color: #FFFFFF;
+  margin: 20px 0px 0px 100px;
+  display: block;
+  background-image: url("https://www.zingchart.com/images/thomas-powell-zingchart.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#profileDescription h1{
+  color: #FFFFFF;
+  float: left;
+  position: relative;
+  line-height: 200px;
+  font-family: "Open Sans", sans-serif;
+}
+
+#tabList{
   list-style: none;
   border-bottom: 1px solid #191A1F;
   -webkit-padding-start: 0px !important;
 }
 
-#tabSections ul li{
+#tabList li{
   display: inline-block;
   padding-right: 15px;
 }
 
-#tabSections ul li a{
+#tabList a{
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
   color: #191A1F;
+  font-weight: bold;
 }
 
-#tabSections ul li a.active{
+#tabList a.active{
   color: #FFD700;
   border-bottom: 1px solid #FFD700;
 }
@@ -222,20 +216,28 @@ footer{
   margin-left: -40px;
 }
 
-#recommendedList .recListItem{
+#recommendedList .recommendedItem{
   display: block;
 }
 
-#recommendedList .recListItem a{
+#recommendedList .recommendedItem a{
   text-align: center;
   display: block;
   text-decoration: none;
+  margin-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: #191A1F;
+}
+
+#recommendedList .recommendedItem a:hover{
+  color: #FFD700;
 }
 
 .singleMovie{
   border: 2px solid black;
   box-shadow: 2px 0 2px black;
   border-radius: 2px;
+  margin: 0px 20px;
 }
 
 .singleMovie:hover{
@@ -246,12 +248,12 @@ footer{
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -40px;
+  margin: 0 auto;
 }
 
-#watchlists .movielist{
+#watchlists .watchlistContent{
   float: left;
-  width: 290px;
+  width: 300px;
   margin-right: 50px;
 }
 
@@ -273,7 +275,74 @@ footer{
   border-radius: 4px;
 }
 
-#watchlists h3{
-  text-align: center;
+.watchlistDescription{
   width: 100%;
+  display: block;
+  margin-top: 280px;
+  margin-left: 50px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.watchlistLink:hover{
+  color: #FFD700;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #191A1F;
+  color: #FFFFFF;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px){
+  #loginWrapper > section{
+    margin: 50px 0;
+  }
+
+  #loginLeft{
+    display: none !important;
+  }
+
+  #loginRight{
+    padding-top: 100px;
+  }
+
+  #profilePicture{
+    margin: auto;
+    float: none;
+  }
+
+  #circle{
+    margin: auto;
+  }
+
+  #profileDescription h1{
+    float: none;
+    text-align: center;
+    line-height: 0px;
+  }
+
+  #profileWrapper{
+    padding: 0 20px;
+  }
+
+  #recommendedList{
+    list-style: none;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #watchlists{
+    display: block;
+  }
+
 }
