@@ -158,10 +158,6 @@
   overflow: hidden;
 }
 
-#profilePicture{
-  width: 300px;
-}
-
 #circle{
   border-radius: 50%;
   border: 4px solid #FFFFFF;
@@ -182,6 +178,8 @@
   line-height: 200px;
   font-family: "Open Sans", sans-serif;
   font-size: 1.6em;
+  padding: 0 20px !important;
+  left: -130px;
 }
 
 #tabList{
@@ -334,10 +332,7 @@ footer{
     float: none;
     text-align: center;
     line-height: 0px;
-  }
-
-  #profileWrapper{
-    padding: 0 20px;
+    left: 0;
   }
 
   #recommendedList{
@@ -349,6 +344,14 @@ footer{
 
   #watchlists{
     display: block;
+  }
+
+}
+
+@media only screen and (max-width: 1080px){
+
+  #profileDescription h1{
+    left: -10px;
   }
 
 }
