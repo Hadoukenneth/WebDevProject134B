@@ -28,14 +28,14 @@
 #loginWrapper > section{
   display: inline-block;
   vertical-align: middle;
-  margin: 0 50px;
-  width: 300px;
+  margin: 0 10px;
+  width: 370px;
   font-family: 'Open Sans', sans-serif;
   color: #FFFFFF;
 }
 
 #loginLeft{
-  padding: 90px 0 50px;
+  padding: 120px 0 50px;
 }
 
 #stackedPhones{
