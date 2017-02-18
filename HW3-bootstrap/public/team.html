@@ -3,6 +3,9 @@
 <head>
   <meta name="description" content="Discover and Share Movies">
   <meta name="author" content="CSE 134B TEAM">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <title>MovieDex | Team</title>
   <style>
     .round{
@@ -12,42 +15,53 @@
     }
   </style>
 </head>
-<body>
+<body id="teamPage">
 
   <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a id="signout" href="index.html">back to directory</a></li>
-    </ul>
-  </nav>
+  <nav class="navbar navbar-default">
+       <div class="container-fluid">
+           <div class="navbar-header">
+                <a class="navbar-brand" href="home.html">MovieDex</a>
+           </div>
+           <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                   <li><a href="explore.html">explore</a></li>
+                   <li><a href="profile.html">profile</a></li>
+                   <li class="active"><a href="team.html">about us</a></li>
+                   <li><a id="signout" href="index.html">sign out</a></li>           
+               </ul>                   
+           </div>
+        </div>
+   </nav>
 
-  <div id="team">
+  <div id="team" class="container">
     <!-- Team -->
-    <section>
+    <div class="row">
       <h1>Our Team</h1>
-      <blockquote>Our team consists of nice people who just want to create nice things for others.</blockquote>
-      <div class="profile">
+      <h4>Our team consists of nice people who just want to create nice things for others.</h4>
+      <div class="profile col-md-4">
         <img class="round" src="images/Lucky.jpg" alt="Lucky Nguyen">
         <h4>Chau Lucky Nguyen</h4>
         <p>"I love pugs"</p>
         <p>Email: lkn007@ucsd.edu</p>
       </div>
-      <div class="profile">
+      <div class="profile col-md-4">
         <img class="round" src="images/Kenneth.jpg" alt="Kenneth Vu">
         <h4>Kenneth Vu</h4>
         <p>"I love Calvin and Hobbes"</p>
         <p>Email: knnthvu@yahoo.com</p>
       </div>
-      <div class="profile">
+      <div class="profile col-md-4">
         <img class="round" src="images/Ryan.jpg" alt="Ryan Weng">
         <h4>Ryan Weng</h4>
         <p>"I love ice cream"</p>
         <p>Email: rweng@ucsd.edu</p>
       </div>
-    </section>
+    </div>
     <!-- Contact -->
-    <section>
-      <h1>Contact Us!</h1>
+    <div class="row">
+      <div id="contact" class="col-md-12">
+        <h1>Contact Us!</h1>
       <p>We don't bite :)</p>
       <form>
         <label>Your Name</label><br>
@@ -56,7 +70,8 @@
         <textarea rows="4" cols="50"></textarea><br>
         <button type="submit">Send</button>
       </form>
-    </section>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->

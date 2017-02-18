@@ -1,0 +1,96 @@
+/* Explore Page - Ryan */
+#explorePage {
+  background-color: #A2A79E;
+}
+
+#watchlists{
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+}
+
+#watchlists .movielist{
+    float: left;
+    width: 290px;
+    margin-right: 100px;
+}
+
+#watchlists .posterList{
+    list-style: none;
+}
+
+#watchlists .posterList .poster{
+    margin-right: -150px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 1px 0 5px black;
+    float: left;
+}
+
+#watchlists .posterList .poster img{
+    display: block;
+    border-radius: 4px;
+}
+
+#watchlists #first{
+    z-index: 15;
+ }
+
+#watchlists #nth{
+    z-index: 14;
+}
+
+#search {
+    background-color: #44929F;
+    padding-bottom: 20px;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #191A1F;
+  color: #FFFFFF;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+#explore {
+    text-align: center;
+}
+
+#searchButton {
+    padding-top: 20px;
+}
+
+#searchInput {
+    width: 50%;
+}
+
+/* Team Page - Ryan */
+#teamPage {
+  background-color: #A2A79E;
+}
+
+.round{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.profile {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+#contact {
+    text-align: center
+}
