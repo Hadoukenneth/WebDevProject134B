@@ -42,6 +42,8 @@
 /* Explore Page - Ryan */
 #explorePage {
   background-color: #A2A79E;
+    padding: 0;
+    margin: 0;
 }
 
 #watchlists {
@@ -84,6 +86,8 @@
 
 #search {
     background-color: #44929F;
+    padding-top: 100px;
+    padding-bottom: 120px;
 }
 
 footer{
@@ -116,6 +120,9 @@ footer{
 /* Team Page - Ryan */
 #teamPage {
   background-color: #A2A79E;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .round{
@@ -129,4 +136,18 @@ footer{
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
+}
+
+#teamTitle {
+    background-color: #44929F;
+    margin-top: -25px
+}
+
+#teamMembers {
+    padding-top: 20px;
+}
+
+#contact {
+    background-color: #44929F;
+    padding-bottom: 20px;
 }
