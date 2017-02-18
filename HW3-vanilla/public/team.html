@@ -3,23 +3,21 @@
 <head>
   <meta name="description" content="Discover and Share Movies">
   <meta name="author" content="CSE 134B TEAM">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>MovieDex | Team</title>
-  <style>
-    .round{
-      border-radius: 50%;
-      height: 200px;
-      width: 200px;
-    }
-  </style>
 </head>
-<body>
+<body id="teamPage">
 
   <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a id="signout" href="index.html">back to directory</a></li>
-    </ul>
-  </nav>
+  <nav class="navRibbon">
+     <ul>
+       <div class="navHome"><li><a href="home.html">MovieDex</a></li></div>
+       <li><a id="signout" href="index.html">sign out</a></li>           
+       <li><a class="active" href="team.html">about us</a></li>
+       <li><a href="profile.html">profile</a></li>
+       <li><a href="explore.html">explore</a></li>
+     </ul>
+   </nav>
 
   <div id="team">
     <!-- Team -->
@@ -45,6 +43,8 @@
         <p>Email: rweng@ucsd.edu</p>
       </div>
     </section>
+  </div>
+  <div id="contact">
     <!-- Contact -->
     <section>
       <h1>Contact Us!</h1>
@@ -61,7 +61,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>Copyright MovieDex 2017</p>
+    &copy; 2017 MovieDex
   </footer>
 
 </body>

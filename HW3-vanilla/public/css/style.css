@@ -1,1 +1,135 @@
-hi
+/* Navbar - Ryan */
+.navRibbon ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #191A1F;
+}
+
+.navRibbon ul .navHome {
+    float: left;
+}
+
+.navRibbon ul li {
+    float: right;
+}
+    
+.navRibbon ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navRibbon ul div li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navRibbon ul a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #44929F;
+}
+
+/* Explore Page - Ryan */
+#explorePage {
+  background-color: #A2A79E;
+}
+
+#watchlists {
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+}
+
+#watchlists .movielist {
+   float: left;
+   width: 290px;
+   margin-right: 100px;
+}
+
+#watchlists .posterList {
+   list-style: none;
+}
+
+#watchlists .posterList .poster {
+   margin-right: -150px;
+   position: relative;
+   display: inline-block;
+   overflow: hidden;
+   box-shadow: 1px 0 5px black;
+   float: left;
+}
+
+#watchlists .posterList .poster img{
+   display: block;
+   border-radius: 4px;
+}
+
+#watchlists #first{
+    z-index: 15;
+}
+
+#watchlists #nth{
+   z-index: 14;
+}
+
+#search {
+    background-color: #44929F;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #191A1F;
+  color: #FFFFFF;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+#explore {
+    text-align: center;
+}
+
+#searchButton {
+    padding-top: 20px;
+}
+
+#searchInput {
+    width: 50%;
+}
+
+/* Team Page - Ryan */
+#teamPage {
+  background-color: #A2A79E;
+}
+
+.round{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.profile {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+#team {
+}
