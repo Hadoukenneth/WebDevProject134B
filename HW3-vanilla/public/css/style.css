@@ -44,23 +44,6 @@
   background-color: #A2A79E;
 }
 
-#navRibbon{
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 60px;
-  padding-left: 0;
-  line-height: 60px;
-  font-size: 1.5em;
-  text-align: center;
-  background-color: #191A1F;
-  z-index: 999;
-  font-family: 'Open Sans', sans-serif;
-  color: #FFFFFF;
-}
-
 #loginWrapper{
   text-align: center;
   padding: 0;
@@ -187,7 +170,6 @@
   width: 100%;
   background-color: #44929F;
   padding: 20px 0px;
-  margin-top: 60px;
   box-sizing: border-box;
   padding-left: 0;
   position: relative;
@@ -414,7 +396,7 @@
 
 #teamTitle {
     background-color: #44929F;
-    margin-top: -25px
+    margin-top: -20px
 }
 
 #teamMembers {
