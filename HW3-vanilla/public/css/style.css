@@ -1,3 +1,44 @@
+/* Navbar - Ryan */
+.navRibbon ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #191A1F;
+}
+
+.navRibbon ul .navHome {
+    float: left;
+}
+
+.navRibbon ul li {
+    float: right;
+}
+    
+.navRibbon ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navRibbon ul div li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navRibbon ul a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #44929F;
+}
+
 /* Login Page - Lucky */
 #loginPage{
   background-color: #A2A79E;
@@ -285,6 +326,104 @@
 
 .watchlistLink:hover{
   color: #FFD700;
+}
+
+/* Explore Page - Ryan */
+#explorePage {
+  background-color: #A2A79E;
+    padding: 0;
+    margin: 0;
+}
+
+#exploreWatchlists {
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+}
+
+#exploreWatchlists .movielist {
+   float: left;
+   width: 290px;
+   margin-right: 100px;
+}
+
+#exploreWatchlists .posterList {
+   list-style: none;
+}
+
+#exploreWatchlists .posterList .poster {
+   margin-right: -150px;
+   position: relative;
+   display: inline-block;
+   overflow: hidden;
+   box-shadow: 1px 0 5px black;
+   float: left;
+}
+
+#exploreWatchlists .posterList .poster img{
+   display: block;
+   border-radius: 4px;
+}
+
+#exploreWatchlists #first{
+    z-index: 15;
+}
+
+#exploreWatchlists #nth{
+   z-index: 14;
+}
+
+#search {
+    background-color: #44929F;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+#explore {
+    text-align: center;
+}
+
+#searchButton {
+    padding-top: 20px;
+}
+
+#searchInput {
+    width: 50%;
+}
+
+/* Team Page - Ryan */
+#teamPage {
+  background-color: #A2A79E;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.round{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.profile {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+#teamTitle {
+    background-color: #44929F;
+    margin-top: -25px
+}
+
+#teamMembers {
+    padding-top: 20px;
+}
+
+#contact {
+    background-color: #44929F;
+    padding-bottom: 20px;
 }
 
 footer{

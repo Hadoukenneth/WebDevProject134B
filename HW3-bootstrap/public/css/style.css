@@ -291,6 +291,92 @@
   color: #FFD700;
 }
 
+/* Explore Page - Ryan */
+#explorePage {
+  background-color: #A2A79E;
+    text-align: center;
+}
+
+#explore {
+    margin-top: -20px;
+}
+
+#exploreWatchlists{
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+}
+
+#exploreWatchlists .movielist{
+    float: left;
+    width: 290px;
+    margin-right: 100px;
+}
+
+#exploreWatchlists .posterList{
+    list-style: none;
+}
+
+#exploreWatchlists .posterList .poster{
+    margin-right: -150px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 1px 0 5px black;
+    float: left;
+}
+
+#exploreWatchlists .posterList .poster img{
+    display: block;
+    border-radius: 4px;
+}
+
+#exploreWatchlists #first{
+    z-index: 15;
+ }
+
+#exploreWatchlists #nth{
+    z-index: 14;
+}
+
+#search {
+    background-color: #44929F;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+/* Team Page - Ryan */
+#teamPage {
+  background-color: #A2A79E;
+    text-align: center;
+}
+
+.round{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.profile {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#teamTitle {
+    background-color: #44929F;
+    margin-top: -20px;
+}
+
+#teamMembers {
+    padding-top: 20px;
+}
+
+#contact {
+    background-color: #44929F;
+    padding-bottom: 20px;
+}
+    
 footer{
   position: fixed;
   width: 100%;

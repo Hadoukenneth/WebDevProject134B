@@ -3,59 +3,19 @@
  <head>
    <meta name="description" content="Discover and Share Movies">
    <meta name="author" content="CSE 134B TEAM">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
    <title>MovieDex | Explore</title>
-   <style>
-     #watchlists{
-       overflow: hidden;
-     }
-
-     #watchlists .movielist{
-       float: left;
-       width: 290px;
-       margin-right: 100px;
-     }
-
-     #watchlists .posterList{
-       list-style: none;
-     }
-
-     #watchlists .posterList .poster{
-       margin-right: -150px;
-       position: relative;
-       display: inline-block;
-       overflow: hidden;
-       box-shadow: 1px 0 5px black;
-       float: left;
-     }
-
-     #watchlists .posterList .poster img{
-       display: block;
-       border-radius: 4px;
-     }
-
-     #watchlists #first{
-       z-index: 15;
-     }
-
-     #watchlists #nth{
-       z-index: 14;
-     }
-   </style>
  </head>
- <body>
+ <body id="explorePage">
 
    <!-- Navigation Bar -->
-   <nav>
+   <nav class="navRibbon">
      <ul>
-       <li><a href="home.html">MovieDex</a></li>
-       <li><a href="explore.html">explore</a></li>
+       <div class="navHome"><li><a href="home.html">MovieDex</a></li></div>
+       <li><a id="signout" href="index.html">sign out</a></li>           
+       <li><a href="team.html">about us</a></li>
        <li><a href="profile.html">profile</a></li>
-       <li>settings
-         <ul>
-           <li><a id="signout" href="index.html">sign out</a></li>
-           <li><a id="back" href="../index.html">back to directory</a></li>
-         </ul>
-       </li>
+       <li><a class="active" href="explore.html">explore</a></li>
      </ul>
    </nav>
 
@@ -63,14 +23,14 @@
     <!-- Search Bar -->
     <section id="search">
       <form>
-        <h1><strong>Discover new movies.</strong></h1>
-        <input type="search">
-        <button type="submit"><strong>Search</strong></button>
+        <h1><strong>Discover new movies!</strong></h1>
+        <input id="searchInput" type="search">
+        <div id="searchButton"><button type="submit"><strong>Search</strong></button></div>
       </form>
     </section>
     <!-- Popular -->
-    <section id="watchlists">
-      <h2><strong>Popular Watchists</strong></h2>
+    <section id="exploreWatchlists">
+      <h2><strong>Popular Watchlists</strong></h2>
       <hr>
       <section class="movielist">
         <a href="#">
@@ -114,7 +74,7 @@
     </section>
     <!-- Recommended -->
     <section id="movieRec">
-      <h2><strong>Popular Movie Recommendations</strong></h2>
+      <h2><strong>Popular Movies</strong></h2>
       <div>
         <a href="#"><img src="http://www.hollywoodreporter.com/sites/default/files/custom/Blog_Images/avengers-movie-poster-1.jpg" alt="Avengers" width="200" height="300"></a>
         <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/736x/fd/5e/66/fd5e662dce1a3a8cd192a5952fa64f02.jpg" alt="Fight Club" width="200" height="300"></a>
@@ -126,7 +86,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>Copyright MovieDex 2017</p>
+    &copy; 2017 MovieDex
   </footer>
 
  </body>
