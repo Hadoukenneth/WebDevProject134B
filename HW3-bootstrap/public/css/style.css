@@ -299,12 +299,53 @@
 
 #explore {
     margin-top: -20px;
+    padding-bottom: 150px;
+}
+
+#explore input[type="search"]{
+  font-size: 15px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 32.3px;
+  border: none;
+  width: 32.3%;
+}
+
+#explore #searchBtn{
+  margin-left: -5px;
+  margin-top: -3px;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  background-color: #015267;
+  border: 1px solid #015267;
+  color: #FFFFFF;
+}
+
+#explore .movieListTitle{
+  text-align: left;
+  margin-left: 45px;
+  col
 }
 
 #exploreWatchlists{
     overflow: hidden;
     text-align: center;
     display: inline-block;
+}
+
+#exploreWatchlists a{
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: #191A1F;
+}
+
+#explore #exploreWatchlists a:hover{
+  color: #FFD700;
 }
 
 #exploreWatchlists .movielist{
@@ -340,9 +381,9 @@
 }
 
 #search {
-    background-color: #44929F;
-    padding-top: 100px;
-    padding-bottom: 120px;
+  background-color: #44929F;
+  padding-top: 100px;
+  padding-bottom: 120px;
 }
 
 /* Team Page - Ryan */
@@ -366,17 +407,53 @@
 #teamTitle {
     background-color: #44929F;
     margin-top: -20px;
+    padding: 50px 0;
 }
 
 #teamMembers {
-    padding-top: 20px;
+    padding: 50px 0;
+
 }
 
 #contact {
-    background-color: #44929F;
-    padding-bottom: 20px;
+  background-color: #44929F;
+  padding: 50px 0 100px;
 }
-    
+
+#contactName,
+#contactMessage{
+  width: 50%;
+  margin: 0 auto;
+  max-width: 50%;
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+}
+
+#contactName:hover,
+#contactMessage:hover,
+#contactName:focus,
+#contactMessage:focus{
+  width: 50%;
+  margin: 0 auto;
+  max-width: 50%;
+  border-radius: 5px;
+  border: 1px solid #FFD700;
+  outline: none !important;
+}
+
+#send{
+  width: 50%;
+  background-color: #015267;
+  border: 1px solid #015267;
+  color: #FFFFFF;
+}
+
+#send:hover{
+  border: 1px solid #FFD700;
+  background-color: #015267;
+  color: #FFFFFF;
+}
+
 footer{
   position: fixed;
   width: 100%;
