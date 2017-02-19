@@ -3,25 +3,13 @@
     <head>
         <meta name="movie description" content="Description of Movies">
         <meta name="author" content="CSE 134B TEAM">
-        <title>MovieDex | Explore</title>
-        <style>
-            #wrap {
-            width:700px;
-            margin:0 auto;
-            background:#99c;
-            }
-            #description {
-            float:left;
-            width:400px;
-            }
-            #picture {
-            float:right;
-            width:300px;
-            }
-        </style>
+        <title>Movie Description</title>
+
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     </head>
     <body>
-
         <!-- Navigation Bar -->
         <nav>
             <ul>
@@ -37,45 +25,45 @@
             </ul>
         </nav>
 
-        <div>
-        <!-- Movie Image -->
-        <section id="picture">
-          <h2>Movie Poster</h2>
-            <figure>
-                <img id="nth" src="https://s-media-cache-ak0.pinimg.com/736x/64/f4/07/64f40735cb2012cc3fd5cc8fca011369.jpg" width="200" height="300">
-                <figcaption>The Lion King copyright © 1994 the Walt Disney Company</figcaption>
-            </figure>
-        </section>
+        <div class = "row" id = "bodyContent">
 
+            <!-- Movie Description -->
+            <div class = "col-md-6" id="description">
+                <h1> The Lion King </h1>
+                <h3> 8.5/10 </h3>
+                <p> "A young lion prince is born in Africa, thus making his uncle Scar the second in line to the throne. Scar plots with the hyenas to kill King Mufasa and Prince Simba, thus making himself King. The King is killed and Simba is led to believe by Scar that it was his fault, and so flees the kingdom in shame." -imdb
+                </p>
 
-        <!-- Movie Description -->
-        <section id="description">
-            <h1> The Lion King </h1>
-            <h3> 8.5/10 </h3>
-            <p> "A young lion prince is born in Africa, thus making his uncle Scar the second in line to the throne. Scar plots with the hyenas to kill King Mufasa and Prince Simba, thus making himself King. The King is killed and Simba is led to believe by Scar that it was his fault, and so flees the kingdom in shame." -imdb
-            </p>
+                <label>Cast:</label><br>
+                <label>Matthew Broderick</label><br>
+                <label>Jonathan Taylor Thomas</label><br>
+                <label>James Earl Jones</label><br>
+                <label>Jeremy Irons</label><br>
+                <label>Moira Kelly</label><br>
+                <label>Niketa Calame</label><br>
 
-            <label>Cast:</label><br>
-            <label>Matthew Broderick</label><br>
-            <label>Jonathan Taylor Thomas</label><br>
-            <label>James Earl Jones</label><br>
-            <label>Jeremy Irons</label><br>
-            <label>Moira Kelly</label><br>
-            <label>Niketa Calame</label><br>
+            </div>
 
-            <!-- Footer -->
-            <br><br><br><br>
-            <footer>
-            <p>Copyright MovieDex 2017</p>
-            </footer>
+            <!-- Movie Image -->
+            <div class = "col-md-6" id="picture">
+            <h2>Movie Poster</h2>
+                <figure>
+                    <img class = "movieDescriptionPic" id="nth" src="images/lionking.jpg">
+                    <figcaption>The Lion King copyright © 1994 the Walt Disney Company</figcaption>
+                </figure>
 
+                <!--Button to Playlist-->
+                <a href="PlaylistDescription.html">
+                    <button id = "addToPlaylistButton">
+                        Add to playlist
+                    </button>
+                </a>
+            </div>
 
-        </section>
         </div>
-
-
-
-
-
+        
+        <footer>
+                <p>Copyright MovieDex 2017</p>
+        </footer>
  </body>
 </html>
