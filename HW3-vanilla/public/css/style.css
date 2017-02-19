@@ -1,64 +1,44 @@
-header {
-	margin: ;
-	color: ;
-	padding px px px px;
-}
-
-body {
-	background: #A2A79E;
+.theBody {
+	background-color: #A2A79E;
 	color: white;
-	padding: px px px px;
-}
-
-header h1 {
-
-}
-    
+}   
 .movieDescriptionPic {
 	width:100%;
 	height:100%;
 }   
-
 .pic1stRow{
 	width:30%;
 	float:left;
 	margin:1%;
 }
-
 .pic2ndRow{
 	width:30%;	
 	float:left;
 	margin:1%;
 }
-
 .pic3rdRow{
 	width:30%;
 	float:left;
 	margin:1%;	
 }
-
 #bodyContent {
 	padding:0.5%;
 	color: #191A1F;
 }
-
 #picture {
 	float:left;
 	width:45%;
 	padding: 2%;
 }
-
 #description {
 	float:left;
 	width:45%;
 	padding: 2%;
 }
-
 #addToPlaylistButton {
-	background:#015267;
+	background-color:#015267;
 	border-radius: 5px;
 }
-
 #footer {
 	clear: both;
 }
