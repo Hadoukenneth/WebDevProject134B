@@ -10,27 +10,39 @@
   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <title>MovieDex</title>
 </head>
 
 <body id="profilePage">
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-inverse">
-       <div class="container-fluid">
-           <div class="navbar-header">
-                <a class="navbar-brand" href="explore.html">MovieDex</a>
-           </div>
-           <div class="collapse navbar-collapse">
-               <ul class="nav navbar-nav navbar-right">
-                   <li><a href="explore.html">explore</a></li>
-                   <li class="active"><a href="profile.html">profile</a></li>
-                   <li><a href="team.html">about us</a></li>
-                   <li><a id="signout" href="index.html">sign out</a></li>           
-               </ul>                   
-           </div>
-        </div>
-   </nav>
+  <!-- Navigation Bar -->
+     <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+             <!-- Brand and toggle get grouped for better mobile display -->
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#moviedex-navbar-collapse" aria-expanded="false">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                 <a class="navbar-brand" href="explore.html">MovieDex</a>
+             </div>
+             
+             <!-- Collect the nav links, forms, and other content for toggling -->
+             <div class="collapse navbar-collapse" id="moviedex-navbar-collapse">
+                 <ul class="nav navbar-nav navbar-right">
+                     <li><a href="explore.html">explore</a></li>
+                     <li class="active"><a href="profile.html">profile</a></li>
+                     <li><a href="team.html">about us</a></li>
+                     <li><a id="signout" href="index.html">sign out</a></li>
+                 </ul>
+             </div><!-- /.navbar-collapse -->
+         </div><!-- /.container-fluid -->
+     </nav>
 
   <!-- Profile Banner -->
   <div id="profileBanner">
