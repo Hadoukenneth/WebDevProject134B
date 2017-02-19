@@ -518,3 +518,23 @@ footer{
   }
 
 }
+
+.theBody {
+	background-color: #A2A79E;
+	padding:0.5%;
+	color: #191A1F;
+}
+#picture {
+	float:left;
+}
+#description {
+	float:left;
+}
+#addToPlaylistButton {
+	background-color:#015267;
+	border-radius: 5px;
+}
+#footer {
+	clear: both;
+  	margin: 50px 0;
+}

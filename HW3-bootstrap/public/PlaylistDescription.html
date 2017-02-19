@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
-     <head>
+ <head>
    <meta name="description" content="Discover and Share Movies">
    <meta name="author" content="CSE 134B TEAM">
    <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -8,7 +8,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-   <title>MovieDex | Movie</title>
+   <title>MovieDex | Playlist</title>
  </head>
     <body class = "theBody">
         <!-- Navigation Bar -->
@@ -36,44 +36,56 @@
              </div><!-- /.navbar-collapse -->
          </div><!-- /.container-fluid -->
      </nav>
-        <div class = "row" id = "bodyContent">
+        <div id = "bodyContent" class="row">
 
-            <!-- Movie Description -->
-            <div class = "col-md-6" id="description">
-                <h1> The Lion King </h1>
-                <h3> 8.5/10 </h3>
-                <p> "A young lion prince is born in Africa, thus making his uncle Scar the second in line to the throne. Scar plots with the hyenas to kill King Mufasa and Prince Simba, thus making himself King. The King is killed and Simba is led to believe by Scar that it was his fault, and so flees the kingdom in shame." -imdb
+            <!-- Playlist Description -->
+            <div class ="col-md-6" id = "description">
+                <h1> My Playlist Description </h1>
+                <h3> An Action Playlist </h3>
+                <p> Sometimes I feel like I need to relax and destress. Other times, I feel that watching other people with larger problems than I have makes me feel better about my own problems. That is where this playlist comes in. Sure sure life may be stressful worrying about assingments and midterms but it never comes down to having to kill somebody or blowing shit up. No ones trying to kill you or trying to blow your shit up either. Feels good doesn't it?
                 </p>
-                <label>Cast:</label><br>
-                <label>Matthew Broderick</label><br>
-                <label>Jonathan Taylor Thomas</label><br>
-                <label>James Earl Jones</label><br>
-                <label>Jeremy Irons</label><br>
-                <label>Moira Kelly</label><br>
-                <label>Niketa Calame</label><br>
             </div>
 
-            <!-- Movie Image -->
-            <div class = "col-md-6" id="picture">
-            <h2>Movie Poster</h2>
-                <figure>
-                    <img class = "movieDescriptionPic" id="nth" src="images/lionking.jpg">
-                    <figcaption>The Lion King copyright © 1994 the Walt Disney Company</figcaption>
-                </figure>
-
-                <!--Button to Playlist-->
-                <a href="PlaylistDescription.html">
-                    <button id = "addToPlaylistButton">
-                        Add to playlist
-                    </button>
-                </a>
+            <!-- Playlist Grid -->
+            <div class = "col-md-6" id = "picture">
+                <div class = row>
+                    <div>
+                        <img class = "col-md-4" id="first" src="images/lordoftherings.jpg">
+                    </div>
+                    <div>
+                        <img class = "col-md-4" id="second" src="images/300.jpg">
+                    </div>
+                    <div>
+                        <img class = "col-md-4" id="third" src="images/diehard.jpg">
+                    </div>
+                </div>
+                <div class = row>
+                    <div>
+                        <img class = "col-md-4" id="fourth" src="images/enterthedragon.jpg">
+                    </div>
+                    <div>
+                        <img class = "col-md-4" id="fifth" src="images/gladiator.jpg">
+                    </div>
+                    <div>
+                        <img class = "col-md-4" id="sixth" src="images/goodbadugly.jpg">
+                    </div>
+                </div>
+                <div class = row>
+                    <div>
+                        <img class = "col-md-4" id="seventh" src="images/predator.jpg">
+                    </div>
+                    <div>
+                        <img class = "col-md-4" id="eigth" src="images/rambo.jpg">
+                    </div>
+                    <div>
+                        <img class = "col-md-4" id="ninth" src="images/killbill.jpg">
+                    </div>
+                </div>
             </div>
-
         </div>
-        
         <!-- Footer -->
       <footer>
         <p>Copyright MovieDex 2017</p>
       </footer>
- </body>
+    </body>
 </html>

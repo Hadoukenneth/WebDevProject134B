@@ -440,6 +440,52 @@ footer{
   box-sizing: border-box;
 }
 
+#theBody {
+	background-color: #A2A79E;
+    padding: 0;
+    margin: 0;
+}   
+.movieDescriptionPic {
+	width:100%;
+	height:100%;
+}   
+.pic1stRow{
+	width:30%;
+	float:left;
+	margin:1%;
+}
+.pic2ndRow{
+	width:30%;	
+	float:left;
+	margin:1%;
+}
+.pic3rdRow{
+	width:30%;
+	float:left;
+	margin:1%;	
+}
+#bodyContent {
+	padding:0.5%;
+	color: #191A1F;
+}
+#picture {
+	float:left;
+	width:45%;
+	padding: 2%;
+}
+#description {
+	float:left;
+	width:45%;
+	padding: 2%;
+}
+#addToPlaylistButton {
+	background-color:#015267;
+	border-radius: 5px;
+}
+#footer {
+	clear: both;
+}
+
 @media only screen and (max-width: 768px){
   #loginWrapper > section{
     margin: 50px 0;
@@ -482,5 +528,4 @@ footer{
   #watchlists{
     display: block;
   }
-
 }
