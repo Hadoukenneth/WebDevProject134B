@@ -1,0 +1,531 @@
+/* Navbar - Ryan */
+.navRibbon ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #191A1F;
+}
+
+.navRibbon ul .navHome {
+    float: left;
+}
+
+.navRibbon ul li {
+    float: right;
+}
+    
+.navRibbon ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navRibbon ul div li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navRibbon ul a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #44929F;
+}
+
+/* Login Page - Lucky */
+#loginPage{
+  background-color: #A2A79E;
+}
+
+#navRibbon{
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  padding-left: 0;
+  line-height: 60px;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #191A1F;
+  z-index: 999;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+#loginWrapper{
+  text-align: center;
+  padding: 0;
+}
+
+#loginWrapper > section{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+  width: 370px;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+#loginLeft{
+  padding: 120px 0 50px;
+}
+
+#stackedPhones{
+  list-style: none;
+}
+
+#stackedPhones .phones{
+  margin-right: -230px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  float: left;
+}
+
+#stackedPhones .phones img {
+  display: block;
+  border-radius: 4px;
+}
+
+#stackedPhones .phones img#first{
+  z-index: 999999;
+}
+
+#loginRight h1,
+#loginRight h3{
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 0px;
+}
+
+#loginRight h1{
+  font-size: 1.5em;
+}
+
+#loginRight h3{
+  font-size: 1em;
+  padding-bottom: 10px;
+  font-weight: lighter;
+}
+
+#loginForm label{
+  display: inline-block;
+  float: left;
+  width: 13%;
+  padding: 5px 0px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-right: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#loginForm input[type="text"]{
+  width: 77%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  float: left;
+  clear: right;
+  height: 41px;
+  margin-bottom: 12px;
+  padding: 0px 15px;
+  font-size: 15px;
+  background-color: transparent;
+  border-bottom: 1.5px solid #FFFFFF;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+#loginForm input[type="text"]:hover,
+#loginForm input[type="text"]:focus{
+  border-bottom: 1.5px solid #FFD700;
+  outline: none;
+}
+
+#loginForm input[type="submit"]{
+  border: 1px solid transparent;
+  display: inline-block;
+  height: 45px;
+  padding: 0px 15px;
+  width: 48.5%;
+  background-color: #015267;
+  color: #FFFFFF;
+  line-height: 45px;
+  margin-top: 15px;
+}
+
+#loginForm input[type="submit"]:hover{
+  border: 1px solid #FFD700;
+}
+
+#loginForm #loginBtn{
+  background-color: #44929F;
+}
+
+/* Profile Page - Lucky */
+#profilePage{
+  background-color: #A2A79E;
+  margin: 0px;
+}
+
+#profileWrapper{
+  padding: 0 100px;
+  margin: 0 auto;
+}
+
+#profileBanner{
+  width: 100%;
+  background-color: #44929F;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  padding-left: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#profilePicture{
+  margin-right: 30px;
+  float: left;
+}
+
+#circle{
+  border-radius: 50%;
+  border: 4px solid #FFFFFF;
+  width: 200px;
+  height: 200px;
+  background-color: #FFFFFF;
+  margin: 20px 0px 0px 100px;
+  display: block;
+  background-image: url("https://www.zingchart.com/images/thomas-powell-zingchart.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#profileDescription h1{
+  color: #FFFFFF;
+  float: left;
+  position: relative;
+  line-height: 200px;
+  font-family: "Open Sans", sans-serif;
+}
+
+#tabList{
+  list-style: none;
+  border-bottom: 1px solid #191A1F;
+  -webkit-padding-start: 0px !important;
+}
+
+#tabList li{
+  display: inline-block;
+  padding-right: 15px;
+}
+
+#tabList a{
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #191A1F;
+  font-weight: bold;
+}
+
+#tabList a.active{
+  color: #FFD700;
+  border-bottom: 1px solid #FFD700;
+}
+
+#favorite,
+#recommended,
+#watchlists{
+  padding: 0px 0px 100px;
+}
+
+#recommendedList{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -40px;
+}
+
+#recommendedList .recommendedItem{
+  display: block;
+}
+
+#recommendedList .recommendedItem a{
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: #191A1F;
+}
+
+#recommendedList .recommendedItem a:hover{
+  color: #FFD700;
+}
+
+.singleMovie{
+  border: 2px solid black;
+  box-shadow: 2px 0 2px black;
+  border-radius: 2px;
+  margin: 0px 20px;
+}
+
+.singleMovie:hover{
+  border: 2px solid #FFD700;
+}
+
+#watchlists{
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+#watchlists .watchlistContent{
+  float: left;
+  width: 300px;
+  margin-right: 50px;
+}
+
+#watchlists .posterList{
+  list-style: none;
+}
+
+#watchlists .posterList .poster{
+  margin-right: -100px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 1px 0 5px black;
+  float: left;
+}
+
+#watchlists .posterList .poster img{
+  display: block;
+  border-radius: 4px;
+}
+
+.watchlistDescription{
+  width: 100%;
+  display: block;
+  margin-top: 280px;
+  margin-left: 50px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.watchlistLink:hover{
+  color: #FFD700;
+}
+
+/* Explore Page - Ryan */
+#explorePage {
+  background-color: #A2A79E;
+    padding: 0;
+    margin: 0;
+}
+
+#exploreWatchlists {
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+}
+
+#exploreWatchlists .movielist {
+   float: left;
+   width: 290px;
+   margin-right: 100px;
+}
+
+#exploreWatchlists .posterList {
+   list-style: none;
+}
+
+#exploreWatchlists .posterList .poster {
+   margin-right: -150px;
+   position: relative;
+   display: inline-block;
+   overflow: hidden;
+   box-shadow: 1px 0 5px black;
+   float: left;
+}
+
+#exploreWatchlists .posterList .poster img{
+   display: block;
+   border-radius: 4px;
+}
+
+#exploreWatchlists #first{
+    z-index: 15;
+}
+
+#exploreWatchlists #nth{
+   z-index: 14;
+}
+
+#search {
+    background-color: #44929F;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+#explore {
+    text-align: center;
+}
+
+#searchButton {
+    padding-top: 20px;
+}
+
+#searchInput {
+    width: 50%;
+}
+
+/* Team Page - Ryan */
+#teamPage {
+  background-color: #A2A79E;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.round{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.profile {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+#teamTitle {
+    background-color: #44929F;
+    margin-top: -20px
+}
+
+#teamMembers {
+    padding-top: 20px;
+}
+
+#contact {
+    background-color: #44929F;
+    padding-bottom: 20px;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #191A1F;
+  color: #FFFFFF;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+#theBody {
+	background-color: #A2A79E;
+    padding: 0;
+    margin: 0;
+}   
+.movieDescriptionPic {
+	width:100%;
+	height:100%;
+}   
+.pic1stRow{
+	width:30%;
+	float:left;
+	margin:1%;
+}
+.pic2ndRow{
+	width:30%;	
+	float:left;
+	margin:1%;
+}
+.pic3rdRow{
+	width:30%;
+	float:left;
+	margin:1%;	
+}
+#bodyContent {
+	padding:0.5%;
+	color: #191A1F;
+}
+#picture {
+	float:left;
+	width:45%;
+	padding: 2%;
+}
+#description {
+	float:left;
+	width:45%;
+	padding: 2%;
+}
+#addToPlaylistButton {
+	background-color:#015267;
+	border-radius: 5px;
+}
+#footer {
+	clear: both;
+}
+
+@media only screen and (max-width: 768px){
+  #loginWrapper > section{
+    margin: 50px 0;
+  }
+
+  #loginLeft{
+    display: none !important;
+  }
+
+  #loginRight{
+    padding-top: 100px;
+  }
+
+  #profilePicture{
+    margin: auto;
+    float: none;
+  }
+
+  #circle{
+    margin: auto;
+  }
+
+  #profileDescription h1{
+    float: none;
+    text-align: center;
+    line-height: 0px;
+  }
+
+  #profileWrapper{
+    padding: 0 20px;
+  }
+
+  #recommendedList{
+    list-style: none;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #watchlists{
+    display: block;
+  }
+}

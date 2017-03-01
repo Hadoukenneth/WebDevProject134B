@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Login page for users of the website">
+  <meta name="author" content="CSE 134B TEAM">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+  <title>MovieDex | Movie</title>
+</head>
+
+    <body id="theBody">
+        <!-- Navigation Bar -->
+       <nav class="navRibbon">
+         <ul>
+           <div class="navHome"><li><a href="explore.html">MovieDex</a></li></div>
+           <li><a id="signout" href="index.html">sign out</a></li>           
+           <li><a href="team.html">about us</a></li>
+           <li><a href="profile.html">profile</a></li>
+           <li><a class="active" href="explore.html">explore</a></li>
+         </ul>
+       </nav>
+        <div id = "bodyContent">
+
+            <!-- Movie Description -->
+            <section id="description">
+                <h1> The Lion King </h1>
+                <h3> 8.5/10 </h3>
+                <p> "A young lion prince is born in Africa, thus making his uncle Scar the second in line to the throne. Scar plots with the hyenas to kill King Mufasa and Prince Simba, thus making himself King. The King is killed and Simba is led to believe by Scar that it was his fault, and so flees the kingdom in shame." -imdb
+                </p>
+                <label>Cast:</label><br>
+                <label>Matthew Broderick</label><br>
+                <label>Jonathan Taylor Thomas</label><br>
+                <label>James Earl Jones</label><br>
+                <label>Jeremy Irons</label><br>
+                <label>Moira Kelly</label><br>
+                <label>Niketa Calame</label><br>
+            </section>
+
+            <!-- Movie Image -->
+            <section id="picture">
+            <h2>Movie Poster</h2>
+                <figure>
+                    <img class = "movieDescriptionPic" id="nth" src="images/lionking.jpg">
+                    <figcaption>The Lion King copyright © 1994 the Walt Disney Company</figcaption>
+                </figure>
+
+                <!--Button to Playlist-->
+                <a href="PlaylistDescription.html">
+                    <button id = "addToPlaylistButton">
+                        Add to playlist
+                    </button>
+                </a>
+            </section>
+        </div>       
+        <!-- Footer -->
+      <footer>
+        &copy; 2017 MovieDex
+      </footer>
+ </body>
+</html>

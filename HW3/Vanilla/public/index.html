@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Login page for users of the website">
+  <meta name="author" content="CSE 134B TEAM">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+  <title>MovieDex</title>
+</head>
+
+<body id="loginPage">
+  <nav id="navRibbon">
+    MovieDex
+  </nav>
+
+  <div id="loginWrapper">
+    <!-- App Display -->
+    <section id="loginLeft">
+      <ul id="stackedPhones">
+        <li class="phones"><img id="first" src="images/android.png" alt="App Screen" width="240" height="410"></li>
+        <li class="phones"><img id="second" src="images/iphone.png" alt="App Screen" width="290" height="460"></li>
+      </ul>
+    </section>
+    <!-- Login -->
+    <section id="loginRight">
+      <h1>MovieDex</h1>
+      <h3>Manage and share your movie collection.<h3>
+      <form id="loginForm">
+        <label><i class="fa fa-user fa-2x" aria-hidden="true"></i></label>
+        <input id="username" type="text" name="username" value="username">
+        <label><i class="fa fa-lock fa-2x"></i></label>
+        <input id="password" type="text" name="password" value="password">
+        <input id="createAcc" type="submit" value="SIGN UP" formaction="./explore.html">
+        <input id="loginBtn" type="submit" value="LOG IN" formaction="./explore.html">
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2017 MovieDex
+  </footer>
+</body>
+</html>
