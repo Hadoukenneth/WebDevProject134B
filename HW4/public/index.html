@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="MovieDex Login">
+        <meta name="author" content="CSE 134B TEAM">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
+        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title>MovieDex | Login</title>
+    </head>
+    <body id="loginPage">
+        <nav id="navRibbon">
+            MovieDex
+        </nav>
+        <div id="loginWrapper">
+            <div class="container">
+                <div class="row row-centered">
+                    <div class="col-lg-6" id="loginLeft">
+                        <ul id="stackedPhones">
+                            <li class="phones"><img id="first" src="images/android.png" alt="App Screen" width="240" height="410"></li>
+                            <li class="phones"><img id="second" src="images/iphone.png" alt="App Screen" width="290" height="460"></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6" id="loginRight">
+                        <h1>MovieDex</h1>
+                        <h3>Manage and share your movie collection.</h3>
+                        <form id="loginForm">
+                            <label><i class="fa fa-user fa-2x" aria-hidden="true"></i></label>
+                            <input id="username" type="text" name="username" value="username">
+                            <label><i class="fa fa-lock fa-2x"></i></label>
+                            <input id="password" type="text" name="password" value="password">
+                            <input id="createAcc" type="submit" value="SIGN UP" formaction="./explore.html">
+                            <input id="loginBtn" type="submit" value="LOG IN" formaction="./explore.html">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>Copyright MovieDex 2017</p>
+        </footer>
+    </body>
+</html>
