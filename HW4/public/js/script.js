@@ -47,13 +47,13 @@
         var token = result.credential.accessToken;
       }
       var user = result.user;
-      window.location = '/explore.html';
     });
 
     // Start a sign in process for an unauthenticated user.
     var provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('email');
     firebase.auth().signInWithRedirect(provider);
+    window.location = '/explore.html';s
   });
 
   btnSignup.addEventListener('click', function(){
