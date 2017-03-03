@@ -166,27 +166,23 @@ label.icon{
 }
 
 #googleLogin{
-    border: 1px solid #FFFFFF;
     display: block;
     height: 45px;
     padding: 0px 15px;
     width: 48.5%;
-    background-color: transparent;
-    color: #FFFFFF;
+    background-color: #DD4B39;
     line-height: 45px;
     margin: 10px auto;
     text-transform: uppercase;
     letter-spacing: 1px;
-
-}
-
-#googleLogin:hover{
     border: 1px solid #DD4B39;
-    color: #DD4B39;
+    color: #FFFFFF;
+
 }
 
 #createAcc:hover,
-#loginBtn:hover {
+#loginBtn:hover,
+#googleLogin:hover{
     border: 1px solid #FFD700;
 }
 
