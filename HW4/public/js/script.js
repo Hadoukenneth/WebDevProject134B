@@ -22,12 +22,6 @@
     var password = passwordTxt.value;
     var auth = firebase.auth();
 
-    // var promise = auth.signInWithEmailAndPassword(email,password);
-    // promise.catch(function(e){
-    //   console.log(e.message);
-    // })
-
-
     firebase.auth().signInWithEmailAndPassword(email, password)
     .catch(function(error) {
       // Handle Errors here.
@@ -43,31 +37,23 @@
   });
 
   btnSignup.addEventListener('click', function(){
-    alert('signup');
-
     var email = emailTxt.value;
     var password = passwordTxt.value;
     var auth = firebase.auth();
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  if (errorCode == 'auth/weak-password') {
-    alert('The password is too weak.');
-  } else {
-    console.log('here');
-    alert(errorMessage);
-  }
-  console.log(error);
-});
-
-    // var promise = auth.createUserWithEmailAndPassword(email,password);
-    // console.log(promise);
-    // promise.catch(function(e){
-    //   console.log(e.message);
-    // })
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    if (errorCode == 'auth/weak-password') {
+      alert('The password is too weak.');
+    } else {
+      console.log('here');
+      alert(errorMessage);
+    }
+    console.log(error);
+    });
   });
 
   btnLogout.addEventListener('click', function(){
@@ -84,6 +70,14 @@
       btnLogout.setAttribute('display', 'none');
     }
   });
+
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log('signedin');
+  } else {
+    console.log('not signedin');
+  }
+});
 
 
 }());
