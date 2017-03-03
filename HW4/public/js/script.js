@@ -21,6 +21,7 @@
 
     firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
       alert('yayyyy');
+      window.location = '/explore.html';
     },
     function(error) {
       // Handle Errors here.
@@ -40,18 +41,20 @@
     var password = passwordTxt.value;
     var auth = firebase.auth();
 
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+      alert('yayyy');
+      window.location = '/explore.html';
+    })
     .catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    if (errorCode == 'auth/weak-password') {
-      alert('The password is too weak.');
-    } else {
-      console.log('here');
-      alert(errorMessage);
-    }
-    console.log(error);
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      if (errorCode == 'auth/weak-password') {
+        alert('The password is too weak.');
+      } else {
+        console.log('here');
+        alert(errorMessage);
+      }
     });
   });
 

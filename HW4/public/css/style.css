@@ -150,7 +150,7 @@ footer {
     z-index: 999999;
 }
 
-#loginForm label {
+label.icon{
     display: inline-block;
     float: left;
     width: 13%;
@@ -162,7 +162,8 @@ footer {
     border-bottom-left-radius: 5px;
 }
 
-#loginForm input[type="text"] {
+#email,
+#password{
     width: 77%;
     border-top: none;
     border-right: none;
@@ -179,13 +180,16 @@ footer {
     letter-spacing: 1px;
 }
 
-#loginForm input[type="text"]:hover,
-#loginForm input[type="text"]:focus {
+#email:hover,
+#password:hover,
+#email:focus,
+#password:focus {
     border-bottom: 1.5px solid #FFD700;
     outline: none;
 }
 
-#loginForm input[type="submit"] {
+#createAcc,
+#loginBtn{
     border: 1px solid transparent;
     display: inline-block;
     height: 45px;
@@ -195,13 +199,15 @@ footer {
     color: #FFFFFF;
     line-height: 45px;
     margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #loginForm input[type="submit"]:hover {
     border: 1px solid #FFD700;
 }
 
-#loginForm #loginBtn {
+#loginBtn {
     background-color: #44929F;
 }
 
