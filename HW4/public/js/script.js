@@ -39,7 +39,9 @@
 
   googleLogin.addEventListener('click', function(){
     // Using a redirect.
+    console.log('hello');
     firebase.auth().getRedirectResult().then(function(result) {
+      console.log('hello inside');
       if (result.credential) {
         // This gives you a Google Access Token.
         var token = result.credential.accessToken;
