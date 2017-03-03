@@ -47,6 +47,7 @@
         var token = result.credential.accessToken;
       }
       var user = result.user;
+      window.location = '/explore.html';
     });
 
     // Start a sign in process for an unauthenticated user.
