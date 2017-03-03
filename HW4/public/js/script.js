@@ -20,7 +20,7 @@
     var auth = firebase.auth();
 
     firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
-      alert('yay');
+      alert('yayyyy');
     },
     function(error) {
       // Handle Errors here.
