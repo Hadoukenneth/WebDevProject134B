@@ -18,54 +18,6 @@ footer {
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 768px){
-  #loginWrapper > section{
-    margin: 50px 0;
-  }
-
-  #loginLeft{
-    display: none !important;
-  }
-
-  #loginRight{
-    padding-top: 100px;
-  }
-
-  #profilePicture{
-    margin: auto;
-    float: none;
-  }
-
-  #circle{
-    margin: auto;
-  }
-
-  #profileDescription h1{
-    float: none;
-    text-align: center;
-    line-height: 0px;
-    left: 0;
-  }
-
-  #recommendedList{
-    list-style: none;
-    display: block;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  #watchlists{
-    display: block;
-  }
-
-}
-
-@media only screen and (max-width: 1080px){
-  #profileDescription h1{
-    left: -10px;
-  }
-}
-
 /* Login Page - Lucky */
 #navRibbon {
     position: fixed;
@@ -134,7 +86,7 @@ footer {
 }
 
 #stackedPhones .phones {
-    margin-right: -230px;
+    margin-right: -200px;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -147,6 +99,12 @@ footer {
 }
 
 #stackedPhones .phones img#first {
+    margin-left: -90px;
+    z-index: 999999;
+}
+
+#stackedPhones .phones img#second {
+    margin-top: 40px;
     z-index: 999999;
 }
 
@@ -163,7 +121,7 @@ label.icon{
 }
 
 .glyphicon{
-  font-size: 20px;
+  font-size: 25px !important;
 }
 
 #email,
@@ -207,7 +165,8 @@ label.icon{
     letter-spacing: 1px;
 }
 
-#loginForm input[type="submit"]:hover {
+#createAcc:hover,
+#loginBtn:hover {
     border: 1px solid #FFD700;
 }
 
@@ -525,4 +484,52 @@ label.icon{
 
 .cast {
     list-style-type: none;
+}
+
+@media only screen and (max-width: 1080px){
+  #profileDescription h1{
+    left: -10px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  #loginWrapper > section{
+    margin: 50px 0;
+  }
+
+  #loginLeft{
+    display: none !important;
+  }
+
+  #loginRight{
+    padding-top: 100px;
+  }
+
+  #profilePicture{
+    margin: auto;
+    float: none;
+  }
+
+  #circle{
+    margin: auto;
+  }
+
+  #profileDescription h1{
+    float: none;
+    text-align: center;
+    line-height: 0px;
+    left: 0;
+  }
+
+  #recommendedList{
+    list-style: none;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #watchlists{
+    display: block;
+  }
+
 }

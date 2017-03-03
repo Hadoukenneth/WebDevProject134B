@@ -20,7 +20,6 @@
     var auth = firebase.auth();
 
     firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
-      alert('yayyyy');
       window.location = '/explore.html';
     },
     function(error) {
@@ -32,7 +31,6 @@
       } else {
         alert(errorMessage);
       }
-      console.log(error);
     });
   });
 
@@ -42,7 +40,6 @@
     var auth = firebase.auth();
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-      alert('yayyy');
       window.location = '/explore.html';
     })
     .catch(function(error) {
@@ -50,9 +47,8 @@
       var errorCode = error.code;
       var errorMessage = error.message;
       if (errorCode == 'auth/weak-password') {
-        alert('The password is too weak.');
+        alert('Password should contain at least 6 characters in length and contain, numbers, upper case letters, and lower case letters.');
       } else {
-        console.log('here');
         alert(errorMessage);
       }
     });
