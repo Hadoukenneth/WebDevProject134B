@@ -9,10 +9,13 @@
   };
   firebase.initializeApp(config);
 
+  var provider = new firebase.auth.GoogleAuthProvider();
+
   var emailTxt = document.getElementById('email');
   var passwordTxt = document.getElementById('password');
   var btnLogin = document.getElementById('loginBtn');
   var btnSignup = document.getElementById('createAcc');
+  var googleLogin = document.getElementById('googleLogin');
 
   btnLogin.addEventListener('click', function(){
     var email = emailTxt.value;
@@ -32,6 +35,22 @@
         alert(errorMessage);
       }
     });
+  });
+
+  googleLogin.addEventListener('click', function(){
+    // Using a redirect.
+    firebase.auth().getRedirectResult().then(function(result) {
+      if (result.credential) {
+        // This gives you a Google Access Token.
+        var token = result.credential.accessToken;
+      }
+      var user = result.user;
+    });
+
+    // Start a sign in process for an unauthenticated user.
+    var provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('email');
+    firebase.auth().signInWithRedirect(provider);
   });
 
   btnSignup.addEventListener('click', function(){
