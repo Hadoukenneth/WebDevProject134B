@@ -15,13 +15,14 @@
   var btnSignup = document.getElementById('createAcc');
 
   btnLogin.addEventListener('click', function(){
-    alert('hello');
     var email = emailTxt.value;
     var password = passwordTxt.value;
     var auth = firebase.auth();
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-    .catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
+      alert('yay');
+    },
+    function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;

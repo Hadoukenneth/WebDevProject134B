@@ -12,9 +12,15 @@
   var btnLogout = document.getElementById('logoutBtn');
 
   btnLogout.addEventListener('click', function(){
-    console.log('log out');
-    firebase.auth().signOut();
+    // firebase.auth().signOut();
+    firebase.auth().signOut().then(function() {
+      console.log('log out');
+    }, function(error) {
+      console.log('error');
+    });
   });
+
+
 
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
