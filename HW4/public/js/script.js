@@ -53,16 +53,6 @@
     console.log(error);
     });
   });
-  
-  firebase.auth().onAuthStateChanged(function(firebaseUser){
-    if(firebaseUser){
-      console.log(firebaseUser);
-      btnLogout.setAttribute('display', 'block');
-    }else{
-      console.log('Not signed in');
-      btnLogout.setAttribute('display', 'none');
-    }
-  });
 
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
