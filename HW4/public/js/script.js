@@ -13,8 +13,6 @@
   var passwordTxt = document.getElementById('password');
   var btnLogin = document.getElementById('loginBtn');
   var btnSignup = document.getElementById('createAcc');
-  var btnLogout = document.getElementById('logoutBtn');
-
 
   btnLogin.addEventListener('click', function(){
     alert('hello');
@@ -55,12 +53,7 @@
     console.log(error);
     });
   });
-
-  btnLogout.addEventListener('click', function(){
-    console.log('log out');
-    firebase.auth().signOut();
-  });
-
+  
   firebase.auth().onAuthStateChanged(function(firebaseUser){
     if(firebaseUser){
       console.log(firebaseUser);
