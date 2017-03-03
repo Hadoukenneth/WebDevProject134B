@@ -162,6 +162,10 @@ label.icon{
     border-bottom-left-radius: 5px;
 }
 
+.glyphicon{
+  font-size: 20px;
+}
+
 #email,
 #password{
     width: 77%;
