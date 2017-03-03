@@ -165,6 +165,26 @@ label.icon{
     letter-spacing: 1px;
 }
 
+#googleLogin{
+    border: 1px solid #FFFFFF;
+    display: block;
+    height: 45px;
+    padding: 0px 15px;
+    width: 48.5%;
+    background-color: transparent;
+    color: #FFFFFF;
+    line-height: 45px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+#googleLogin:hover{
+    border: 1px solid #DD4B39;
+    color: #DD4B39;
+}
+
 #createAcc:hover,
 #loginBtn:hover {
     border: 1px solid #FFD700;
@@ -172,6 +192,33 @@ label.icon{
 
 #loginBtn {
     background-color: #44929F;
+}
+
+#socialWrapper {
+    text-align: center;
+    position: relative;
+}
+
+#socialWrapper span {
+    display: inline-block;
+    line-height: 45px;
+}
+
+#socialWrapper span:before,
+#socialWrapper span:after {
+    border-top: 1px solid white;
+    display: block;
+    height: 1px;
+    content: " ";
+    width: 45%;
+    position: absolute;
+    left: 0;
+    top: 1.5em;
+}
+
+#socialWrapper span:after {
+    right: 0;
+    left: auto;
 }
 
 /* Profile Page - Lucky */
