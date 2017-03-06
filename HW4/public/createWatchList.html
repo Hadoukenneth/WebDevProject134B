@@ -77,8 +77,8 @@
                     <h3 class="text-center">{{watchlist.name}}</h3>
                     <p class="text-center">{{watchlist.theme}}</p>
                     <p class="text-center text-info">{{watchlist.movies}} movies</p>
-                    <button type="button" class="btn btn-block btn-success" @click="updatePlaylist(watchlist['.key'], watchlist.movies)">
-                    <button class="btn btn-block btn-danger" @click="removePlaylist(watchlist['.key'])">
+                    <button type="button" class="btn btn-block btn-success" @click="updateWatchlist(watchlist['.key'], watchlist.movies)">
+                    <button class="btn btn-block btn-danger" @click="removeWatchlist(watchlist['.key'])">
                   </div>
                 </div>
               </div>

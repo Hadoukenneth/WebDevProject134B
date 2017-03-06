@@ -391,7 +391,7 @@ label.icon{
     border-bottom-left-radius: 5px;
     height: 32.3px;
     border: none;
-    width: 32.3%;
+    width: 50.3%;
 }
 
 #explore #searchBtn {
@@ -402,6 +402,33 @@ label.icon{
     background-color: #015267;
     border: 1px solid #015267;
     color: #FFFFFF;
+}
+
+#popularCarousel #myCarousel{
+  width: 40%;
+  margin: 0 auto;
+}
+
+#popularCarousel h3{
+  font-size: 2em;
+}
+
+#popularCarousel .carousel-caption h3{
+  background-color: rgba(0,0,0,0.8);
+}
+
+#popularCarousel .carousel-caption {
+  font-size: 1em;
+  right: 10%;
+  left: 60%;
+  top: 30%;
+  bottom: 30%;
+  text-align: left;
+  text-shadow: none;
+}
+
+#popularCarousel .carousel-inner {
+  background-color: #000000;
 }
 
 #explore .movieListTitle {
@@ -598,6 +625,26 @@ label.icon{
 
   #watchlists{
     display: block;
+  }
+
+  #search h1{
+    font-size: 2.3em;
+  }
+
+  #explore input[type="search"] {
+      font-size: 15px;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      height: 32.3px;
+      border: none;
+      width: 70.3%;
+  }
+
+  #popularCarousel #myCarousel{
+    width: 100%;
+    margin: 0 auto;
   }
 
 }

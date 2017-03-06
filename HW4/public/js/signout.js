@@ -31,5 +31,8 @@
   }
 });
 
+$('.carousel').carousel()
+
+
 
 }());
