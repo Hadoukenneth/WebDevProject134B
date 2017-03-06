@@ -32,6 +32,12 @@
                 this.name = ""
                 this.theme = ""
             }
+        },
+        removeWatchlist: function (key) {
+         ref.child(key).remove();
+        },
+        updateWatchlist: function(key, newCount) {
+           ref.child(key).update({"songs": newCount + 1})
         }
       }
     });

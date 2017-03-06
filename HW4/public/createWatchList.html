@@ -44,34 +44,47 @@
             </div><!-- /.container-fluid -->
         </nav>
 
+
         <div id="createWatchlist">
-          <form @submit.prevent="addWatchlist">
-            <div class="row">
-               <div class="col-md-3">
-                  <div class="form-group">
-                     <label for="name">Name of Watchlist:</label>
-                     <input type="text" class="form-control" id="name" v-model="name">
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="form-group">
-                     <label for="theme">Theme of Watchlist:</label>
-                     <input type="text" class="form-control" id="theme" v-model="theme">
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="form-group">
-                     <label>&nbsp;</label>
-                     <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
-                  </div>
-               </div>
-            </div>
-          </form>
+          <div class="container">
+            <form @submit.prevent="addWatchlist">
+              <div class="row">
+                 <div class="col-md-4">
+                    <div class="form-group">
+                       <label for="name">Name of Watchlist:</label>
+                       <input type="text" class="form-control" id="name" v-model="name">
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                       <label for="theme">Theme of Watchlist:</label>
+                       <input type="text" class="form-control" id="theme" v-model="theme">
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                       <label>&nbsp;</label>
+                       <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
+                    </div>
+                 </div>
+              </div>
+            </form>
+          </div>
         </div>
 
-        <div v-for="watchlist in watchlists">
-            <h3 class="text-center">{{watchlist.name}}</h3>
-            <p class="text-center">{{watchlist.theme}}</p>
+        <div id="listOfWatchlists">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <div v-for="watchlist in watchlists">
+                    <h3 class="text-center">{{watchlist.name}}</h3>
+                    <p class="text-center">{{watchlist.theme}}</p>
+                    <button type="button" class="btn btn-block btn-success" @click="updatePlaylist(watchlist['.key'], watchlist.name)">
+                    <button class="btn btn-block btn-danger" @click="removePlaylist(watchlist['.key'])">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Footer -->
