@@ -16,42 +16,42 @@
       el: "#createWatchlist",
       data: {
         name: "",
-        theme: ""
+        genre: ""
       },
       firebase: {
         watchlists: ref
       },
       methods: {
         addWatchlist: function () {
-            if (this.name.trim() && this.theme.trim()) {
+            if (this.name.trim() && this.genre.trim()) {
                 ref.push({
                     "name": this.name,
-                    "theme": this.theme,
-                    "movies": 0,
+                    "genre": this.genre,
+                    "movies": 0
                 })
                 this.name = ""
-                this.theme = ""
+                this.genre = ""
             }
         },
         removeWatchlist: function (key) {
          ref.child(key).remove();
         },
-        updateWatchlist: function(key) {
+        updateWatchlist: function(key, id) {
            console.log('hello');
-           var title = $('#newTitle').val();
+           var title = $('#' + id + ' #newTitle').val();
            if(title != ""){
              ref.child(key).update({"name": title})
-             $('#newTitle').css({'display': 'none'});
-             $('#submitNewTitle').css({'display': 'none'});
+             $('#' + id + ' #newTitle').css({'display': 'none'});
+             $('#' + id + ' #submitNewTitle').css({'display': 'none'});
            }else{
              alert('Name of Watchlist cannot be empty!');
            }
         },
-        showForm: function () {
-          $('#newTitle').css({'display': 'block'});
-          $('#submitNewTitle').css({'display': 'block'});
-          $('#newTitle').val("")
-
+        showForm: function (id) {
+          console.log('id',id);
+          $('#' + id + ' #newTitle').css({'display': 'block'});
+          $('#' + id + ' #submitNewTitle').css({'display': 'block'});
+          $('#' + id + ' #newTitle').val("")
         }
       }
     });
