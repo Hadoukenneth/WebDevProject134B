@@ -27,7 +27,7 @@
                 ref.push({
                     "name": this.name,
                     "theme": this.theme,
-                    "movies": 0
+                    "movies": 0,
                 })
                 this.name = ""
                 this.theme = ""
@@ -36,8 +36,22 @@
         removeWatchlist: function (key) {
          ref.child(key).remove();
         },
-        updateWatchlist: function(key, newCount) {
-           ref.child(key).update({"movies": newCount + 1})
+        updateWatchlist: function(key) {
+           console.log('hello');
+           var title = $('#newTitle').val();
+           if(title != ""){
+             ref.child(key).update({"name": title})
+             $('#newTitle').css({'display': 'none'});
+             $('#submitNewTitle').css({'display': 'none'});
+           }else{
+             alert('Name of Watchlist cannot be empty!');
+           }
+        },
+        showForm: function () {
+          $('#newTitle').css({'display': 'block'});
+          $('#submitNewTitle').css({'display': 'block'});
+          $('#newTitle').val("")
+
         }
       }
     });

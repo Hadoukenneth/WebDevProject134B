@@ -493,6 +493,53 @@ label.icon{
     padding-bottom: 120px;
 }
 
+/* Create Watch List */
+#listOfWatchlists{
+  padding: 10px 0 50px;
+}
+#createWatchlist .eachWatchlist{
+  background-color: #FFFFFF;
+  margin: 10px 20px;
+  padding: 10px;
+}
+
+#createWatchlist button{
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#createWatchlist .delete{
+  background-color: #72243C;
+}
+
+#createWatchlist .update{
+  background-color: #62997A;
+}
+
+#createWatchlist #submitNewTitle{
+  background-color: #000000;
+}
+
+#createWatchlist .glyphicon-remove:before,
+#createWatchlist .glyphicon-pencil:before{
+  font-size: 1em !important;
+  display: inline-block;
+  line-height: 10px;
+}
+
+#createWatchlist #newTitle{
+  width: 100%;
+  border: 1px solid gray;
+}
 /* Team Page - Ryan */
 #team {
     text-align: center;

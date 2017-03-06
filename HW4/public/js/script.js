@@ -74,8 +74,10 @@
   });
 
   firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
+    if (user && window.location != '/') {
       console.log('signedin');
+      window.location = '/explore.html'
+
     } else {
       console.log('not signedin');
     }
