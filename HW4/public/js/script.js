@@ -77,12 +77,12 @@
   });
 
   firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    console.log('signedin');
-  } else {
-    console.log('not signedin');
-  }
-});
+    if (user) {
+      console.log('signedin');
+    } else {
+      console.log('not signedin');
+    }
+  });
 
 
 }());

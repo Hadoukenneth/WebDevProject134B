@@ -3,17 +3,21 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="MovieDex Movie Detail">
+        <meta name="description" content="Explore Movies with MovieDex">
         <meta name="author" content="CSE 134B TEAM">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <title>MovieDex | Movie</title>
+        <!-- CRUD -->
+        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+        <title>MovieDex | Explore</title>
     </head>
-    <body class="theBody">
+    <body id="createWatchlistPage">
         <!-- Navigation Bar -->
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -34,50 +38,48 @@
                         <li><a href="profile.html">profile</a></li>
                         <li><a href="team.html">about us</a></li>
                         <li><a id="signout" href="index.html">sign out</a></li>
+                        <!-- <button id="logoutBtn" value="LOG OUT"></button> -->
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
 
-        <div class="container" id="movieDescription">
+        <div id="createWatchlist">
+          <form @submit.prevent="addWatchlist">
             <div class="row">
-                <!-- Movie Description -->
-                <div class="col-md-6">
-                    <h1 v-model="name">The Lion King</h1>
-                    <button type="button" class="btn btn-success">Add Movie to Watchlist</button>
-                    <h3>8.5/10</h3>
-                    <p>"A young lion prince is born in Africa, thus making his uncle Scar the second in line to the throne. Scar plots with the hyenas to kill King Mufasa and Prince Simba, thus making himself King. The King is killed and Simba is led to believe by Scar that it was his fault, and so flees the kingdom in shame." -imdb</p>
-                    <p>Cast:</p>
-                    <ul class="cast">
-                        <li>Matthew Broderick</li>
-                        <li>Jonathan Taylor Thomas</li>
-                        <li>James Earl Jones</li>
-                        <li>Jeremy Irons</li>
-                        <li>Moira Kelly</li>
-                        <li>Niketa Calame</li>
-                    </ul>
-                </div>
-                <!-- Movie Image -->
-                <div class="col-md-6">
-                    <h2>Movie Poster</h2>
-                    <figure>
-                        <img src="images/lionking.jpg" alt="Lion King" v-model="poster">
-                        <figcaption>The Lion King copyright © 1994 the Walt Disney Company</figcaption>
-                    </figure>
-                    <!--Button to Watchlist-->
-                    <a href="watchlist.html" v-on:click="addToMovieList"><button id="addToPlaylistButton">Add to watchlist</button></a>
-                </div>
+               <div class="col-md-3">
+                  <div class="form-group">
+                     <label for="name">Name of Watchlist:</label>
+                     <input type="text" class="form-control" id="name" v-model="name">
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="form-group">
+                     <label for="theme">Theme of Watchlist:</label>
+                     <input type="text" class="form-control" id="theme" v-model="theme">
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="form-group">
+                     <label>&nbsp;</label>
+                     <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
+                  </div>
+               </div>
             </div>
+          </form>
         </div>
 
-        <div v-for="movielist in movielists">
-            <img :src="movielist.poster" class="img-responsive" alt="Responsive image" style="padding: 20px">
-            <h3 class="text-center">{{movielist.name}}</h3>
+        <div v-for="watch in watchlists">
+            <h3 class="text-center">{{watchlist.name}}</h3>
+            <p class="text-center">{{watchlist.theme}}</p>
         </div>
 
         <!-- Footer -->
         <footer>
             <p>Copyright MovieDex 2017</p>
         </footer>
+        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <script src="js/signout.js"></script>
+        <script src="js/add.js"></script>
     </body>
 </html>
