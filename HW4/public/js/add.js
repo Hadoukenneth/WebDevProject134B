@@ -26,8 +26,8 @@
             if (this.name.trim() && this.theme.trim()) {
                 ref.push({
                     "name": this.name,
-                    "theme": this.theme
-
+                    "theme": this.theme,
+                    "movies": 0
                 })
                 this.name = ""
                 this.theme = ""
@@ -37,7 +37,7 @@
          ref.child(key).remove();
         },
         updateWatchlist: function(key, newCount) {
-           ref.child(key).update({"songs": newCount + 1})
+           ref.child(key).update({"movies": newCount + 1})
         }
       }
     });
