@@ -7,7 +7,7 @@
     messagingSenderId: "820891509335"
   };
   var app = firebase.initializeApp(config);
-  var db = app.database()
+  var db = app.database();
   var ref = db.ref('watchlists');
 
   Vue.use(VueFire);
@@ -19,7 +19,7 @@
         theme: ""
       },
       firebase: {
-        movielists: ref
+        watchlists: ref
       },
       methods: {
         addWatchlist: function () {
