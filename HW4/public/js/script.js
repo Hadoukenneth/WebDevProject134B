@@ -53,7 +53,6 @@
     var provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('email');
     firebase.auth().signInWithRedirect(provider);
-    window.location = '/explore.html';s
   });
 
   btnSignup.addEventListener('click', function(){

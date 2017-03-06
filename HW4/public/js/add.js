@@ -47,14 +47,11 @@
     btnLogout.addEventListener('click', function(){
       // firebase.auth().signOut();
       firebase.auth().signOut().then(function() {
-        console.log('log out');
         window.location = '/';
       }, function(error) {
         console.log('error');
       });
     });
-
-
 
     firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
