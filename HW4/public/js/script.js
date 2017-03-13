@@ -7,7 +7,11 @@
     storageBucket: "moviedex-99d1a.appspot.com",
     messagingSenderId: "820891509335"
   };
-  firebase.initializeApp(config);
+  // firebase.initializeApp(config);
+  var app = firebase.initializeApp(config);
+  var db = app.database();
+  var ref = db.ref('users');
+
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -59,7 +63,17 @@
     var auth = firebase.auth();
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-      window.location = '/explore.html';
+      var user = firebase.auth().currentUser;
+      var token = user.getToken();
+
+      console.log(token);
+      // ref.push
+      ref.push({
+          "name": user.uid,
+          "genre": user.email,
+          "movies": ""
+      })
+      // window.location = '/explore.html';
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -76,7 +90,7 @@
   firebase.auth().onAuthStateChanged(function(user) {
     if (user && window.location != '/') {
       console.log('signedin');
-      window.location = '/explore.html'
+      // window.location = '/explore.html'
 
     } else {
       console.log('not signedin');

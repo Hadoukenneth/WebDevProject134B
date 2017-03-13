@@ -9,6 +9,7 @@
   var app = firebase.initializeApp(config);
   var db = app.database();
   var ref = db.ref('watchlists');
+  var userref = db.ref('users');
 
   Vue.use(VueFire);
 
@@ -19,16 +20,24 @@
         genre: ""
       },
       firebase: {
-        watchlists: ref
+        watchlists: ref,
+        users: userref
       },
       methods: {
         addWatchlist: function () {
+          var user = firebase.auth().currentUser;
+          var userid = user.uid;
+
             if (this.name.trim() && this.genre.trim()) {
-                ref.push({
+                var newWatchlistKey = ref.push({
                     "name": this.name,
                     "genre": this.genre,
-                    "movies": 0
-                })
+                    "movies": 0,
+                    "userID": userid
+                }).key;
+                var updates = {};
+                updates[userid + '/movies/'] = newWatchlistKey;
+                userref.update(updates);
                 this.name = ""
                 this.genre = ""
             }
