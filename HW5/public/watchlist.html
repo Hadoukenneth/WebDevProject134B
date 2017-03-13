@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="MovieDex Watchlist Detail">
+        <meta name="author" content="CSE 134B TEAM">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <title>MovieDex | Watchlist</title>
+    </head>
+    <body class="theBody">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#moviedex-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="explore.html">MovieDex</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="moviedex-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="explore.html">explore</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                        <li><a href="team.html">about us</a></li>
+                        <li><a id="signout" href="index.html">sign out</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <!-- Watchlist Description -->
+                <div class="col-md-6">
+                    <h1>My Watchlist Description</h1>
+                    <h3>An Action Watchlist</h3>
+                    <button type="button" class="btn btn-success">Add Movies to Watchlist</button>
+                    <button type="button" class="btn btn-danger">Delete Watchlist</button>
+                    <p>Sometimes I feel like I need to relax and destress. Other times, I feel that watching other people with larger problems than I have makes me feel better about my own problems. That is where this watchlist comes in. Sure sure life may be stressful worrying about assingments and midterms but it never comes down to having to kill somebody or blowing shit up. No ones trying to kill you or trying to blow your shit up either. Feels good doesn't it?</p>
+                </div>
+                <!-- Watchlist Grid -->
+                <div class="col-md-6">
+                    <div class=row>
+                        <img class="col-md-4" src="images/lordoftherings.jpg" alt="Lord of the Rings">
+                        <img class="col-md-4" src="images/300.jpg" alt="300">
+                        <img class="col-md-4" src="images/diehard.jpg" alt="Die Hard">
+                    </div>
+                    <div class=row>
+                        <img class="col-md-4" src="images/enterthedragon.jpg" alt="Enter The Dragon">
+                        <img class="col-md-4" src="images/gladiator.jpg" alt="Gladiator">
+                        <img class="col-md-4" src="images/goodbadugly.jpg" alt="Good Bad Ugly">
+                    </div>
+                    <div class=row>
+                        <img class="col-md-4" src="images/predator.jpg" alt="Predator">
+                        <img class="col-md-4" src="images/rambo.jpg" alt="Rambo">
+                        <img class="col-md-4" src="images/killbill.jpg" alt="Kill Bill">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Copyright MovieDex 2017</p>
+        </footer>
+    </body>
+</html>

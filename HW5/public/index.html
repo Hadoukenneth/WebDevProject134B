@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="MovieDex Login">
+        <meta name="author" content="CSE 134B TEAM">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title>MovieDex | Login</title>
+    </head>
+    <body id="loginPage">
+      <nav id="navRibbon">MovieDex</nav>
+        <div id="loginWrapper">
+            <div class="container">
+                <div class="row row-centered">
+                    <div class="col-lg-6" id="loginLeft">
+                      <ul id="stackedPhones">
+                          <li class="phones"><img id="second" src="images/android.png" alt="App Screen" width="190" height="380"></li>
+                          <li class="phones"><img id="first" src="images/iphone.png" alt="App Screen" width="510" height="490"></li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-6" id="loginRight">
+                      <h1>MovieDex</h1>
+                      <h3>Manage and share your movie collection.</h3>
+                      <label class="icon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></label>
+                      <input id="email" type="text" name="email" placeholder="email">
+                      <label class="icon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></label>
+                      <input id="password" type="text" name="password" placeholder="password">
+                      <button id="createAcc">Sign Up</button>
+                      <button id="loginBtn">Log In</button>
+                      <div id="socialWrapper">
+                        <span>OR</span>
+                      </div>
+                      <button id="googleLogin">Google +</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Copyright MovieDex 2017</p>
+        </footer>
+        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
