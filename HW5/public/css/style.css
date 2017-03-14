@@ -292,8 +292,8 @@ label.icon{
 }
 
 #favorite,
-#recommended,
-#watchlists {
+#recommendedSection,
+#watchlistsSection {
     padding: 0px 0px 100px;
 }
 
@@ -494,9 +494,10 @@ label.icon{
 }
 
 /* Create Watch List */
-#listOfWatchlists{
+.listOfWatchlists{
   padding: 10px 0 50px;
 }
+
 #createWatchlist .eachWatchlist{
   background-color: #FFFFFF;
   margin: 10px 20px;
@@ -529,7 +530,6 @@ label.icon{
   background-color: #000000;
 }
 
-#createWatchlist .glyphicon-remove:before,
 #createWatchlist .glyphicon-pencil:before{
   font-size: 1em !important;
   display: inline-block;

@@ -11,6 +11,7 @@
   var ref = db.ref('watchlists');
   var userref = db.ref('users');
 
+
   Vue.use(VueFire);
 
   var vm = new Vue({
@@ -26,8 +27,8 @@
       methods: {
         addWatchlist: function () {
           var user = firebase.auth().currentUser;
-          var userid = user.uid; 
-          
+          var userid = user.uid;
+
             if (this.name.trim() && this.genre.trim()) {
                 var newWatchlistKey = ref.push({
                     "name": this.name,
@@ -35,11 +36,10 @@
                     "movies": 0,
                     "user": userid
                 }).key;
-                
+
                 var updates = {};
                 updates['/movies/' + newWatchlistKey] = true;
                 db.ref('users/' + userid).update(updates);
-                
                 this.name = ""
                 this.genre = ""
             }

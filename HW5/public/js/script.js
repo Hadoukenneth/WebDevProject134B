@@ -15,6 +15,7 @@
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
+  var usernameTxt = document.getElementById('username');
   var emailTxt = document.getElementById('email');
   var passwordTxt = document.getElementById('password');
   var btnLogin = document.getElementById('loginBtn');
@@ -61,13 +62,15 @@
     var email = emailTxt.value;
     var password = passwordTxt.value;
     var auth = firebase.auth();
+    var username = usernameTxt.value;
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
       var user = firebase.auth().currentUser;
       db.ref('users/' + user.uid).set({
-          "name": user.uid,
+          "name": username,
           "email": user.email,
           "movies": "",
+          "id": user.uid
       });
       window.location = '/explore.html';
     })

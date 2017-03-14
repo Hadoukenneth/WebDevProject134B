@@ -12,6 +12,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <title>MovieDex | Profile</title>
+        <!-- CRUD -->
+        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
     </head>
     <body id="profilePage">
         <!-- Navigation Bar -->
@@ -48,11 +52,15 @@
                     </div>
                     <div class="col-sm-8" id="profileDescription">
                         <h1>Thomas Powell</h1>
-                        <button onclick="window.location='createWatchList.html'">Create New Watchlist</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" onclick="openModal()">
+                          Create New WatchList
+                        </button>
+                        <!-- <button onclick="window.location='createWatchList.html'">Create New Watchlist</button> -->
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- Profile Content -->
         <div id="profileWrapper">
@@ -61,14 +69,70 @@
                 <div class="row">
                     <div class="col-lg-12" id="tabSection">
                         <ul id="tabList">
-                            <li><a href="javascript:void(0)" class="tablink active" onclick="changeTabs(event, 'recommended');">Recommended Movies</a></li>
-                            <li><a href="javascript:void(0)" class="tablink" onclick="changeTabs(event, 'watchlists');">Watchlists</a></li>
+                            <li><a href="javascript:void(0)" class="tablink active" onclick="changeTabs(event, 'watchlistsSection');">Watchlists</a></li>
+                            <li><a href="javascript:void(0)" class="tablink" onclick="changeTabs(event, 'recommendedSection');">Recommended Movies</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="row">
+                <div id="createWatchlist">
+                  <div class="modal fade" id="myModal">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Create New Watchlist!</h5>
+                        </div>
+                        <div class="modal-body">
+                          <form @submit.prevent="addWatchlist">
+                            <div class="form-group">
+                               <label for="name">Name of Watchlist:</label>
+                               <input type="text" class="form-control" id="name" v-model="name">
+                            </div>
+                            <div class="form-group">
+                               <label for="genre">Genre of Watchlist:</label>
+                               <input type="text" class="form-control" id="genre" v-model="genre">
+                            </div>
+                             <div class="modal-footer">
+                               <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listOfWatchlists tabs" id="watchlistsSection">
+                    <div class="container">
+                      <div class="row">
+                        <div v-for="(watchlist, index) in watchlists">
+                          <div class="col-md-2 eachWatchlist" :id="index">
+                            <h3 class="text-center">{{watchlist.name}}</h3>
+                            <input type="text" id="newTitle" style="display:none;">
+                            <button type="button" id="submitNewTitle" style="display:none;" @click="updateWatchlist(watchlist['.key'], index)">SUBMIT</button>
+                            <p class="text-center">Genre: {{watchlist.genre}}</p>
+                            <p class="text-center text-info">{{watchlist.movies}} movies</p>
+                            <button type="button" class="update" @click="showForm(index)"><span class="glyphicon glyphicon-pencil"></span> Update Title</button>
+                            <button class="delete" @click="removeWatchlist(watchlist['.key'])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 tabs" id="recommendedSection" style="display:none">
+                    <ul id="recommendedList">
+                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"><br>Narnia</a></li>
+                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"><br>Peter Pan</a></li>
+                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/whitehousedown.jpeg" alt="White House Down" width="200" height="300"><br>White House Down</a></li>
+                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/pinocchio.jpeg" alt="Pinocchio" width="200" height="300"><br>Pinocchio</a></li>
+                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/junglebook.jpeg" alt="Jungle Book" width="200" height="300"><br>Jungle Book</a></li>
+                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/gatsby.jpeg" alt="Gatsby" width="200" height="300"><br>Gatsby</a></li>
+                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/avengers.jpeg" alt="Avengers" width="200" height="300"><br>Avengers</a></li>
+                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/nationaltreasure.jpeg" alt="National Treasure" width="200" height="300"><br>National Treasure</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="row"> -->
                     <!-- Recommended -->
-                    <div class="col-lg-12 tabs" id="recommended">
+                    <!-- <div class="col-lg-12 tabs" id="recommended">
                         <ul id="recommendedList">
                             <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"><br>Narnia</a></li>
                             <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"><br>Peter Pan</a></li>
@@ -80,9 +144,9 @@
                             <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/nationaltreasure.jpeg" alt="National Treasure" width="200" height="300"><br>National Treasure</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <!-- Watchlists -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-12 tabs" id="watchlists" style="display:none">
                         <a class="watchlistLink" href="watchlist.html">
                             <div class="watchlistContent">
@@ -124,16 +188,24 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
+
+
 
         <!-- Footer -->
         <footer>
             <p>Copyright MovieDex 2017</p>
         </footer>
     </body>
+    <script src="js/add.js"></script>
     <script>
+        function openModal(){
+          $('#myModal').modal('show');
+        }
+        // $('#myModal').modal();
+
         function changeTabs(evt, tabName) {
             var i, x, tablinks;
             x = document.getElementsByClassName("tabs");
