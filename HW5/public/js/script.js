@@ -64,16 +64,12 @@
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
       var user = firebase.auth().currentUser;
-      var token = user.getToken();
-
-      console.log(token);
-      
       db.ref('users/' + user.uid).set({
           "name": user.uid,
           "email": user.email,
           "movies": "",
       });
-      // window.location = '/explore.html';
+      window.location = '/explore.html';
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -90,7 +86,7 @@
   firebase.auth().onAuthStateChanged(function(user) {
     if (user && window.location != '/') {
       console.log('signedin');
-      // window.location = '/explore.html'
+      window.location = '/explore.html'
 
     } else {
       console.log('not signedin');
