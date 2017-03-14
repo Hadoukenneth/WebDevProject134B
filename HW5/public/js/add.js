@@ -26,18 +26,20 @@
       methods: {
         addWatchlist: function () {
           var user = firebase.auth().currentUser;
-          var userid = user.uid;
-
+          var userid = user.uid; 
+          
             if (this.name.trim() && this.genre.trim()) {
                 var newWatchlistKey = ref.push({
                     "name": this.name,
                     "genre": this.genre,
                     "movies": 0,
-                    "userID": userid
+                    "user": userid
                 }).key;
+                
                 var updates = {};
-                updates[userid + '/movies/'] = newWatchlistKey;
-                userref.update(updates);
+                updates['/movies/' + newWatchlistKey] = true;
+                db.ref('users/' + userid).update(updates);
+                
                 this.name = ""
                 this.genre = ""
             }

@@ -67,12 +67,12 @@
       var token = user.getToken();
 
       console.log(token);
-      // ref.push
-      ref.push({
+      
+      db.ref('users/' + user.uid).set({
           "name": user.uid,
-          "genre": user.email,
-          "movies": ""
-      })
+          "email": user.email,
+          "movies": "",
+      });
       // window.location = '/explore.html';
     })
     .catch(function(error) {
