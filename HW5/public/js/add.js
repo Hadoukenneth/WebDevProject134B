@@ -8,9 +8,10 @@
   };
   var app = firebase.initializeApp(config);
   var db = app.database();
-  var ref = db.ref('watchlists');
+  var moviesref = db.ref('watchlists');
   var userref = db.ref('users');
-
+  var usersmovies = moviesref.orderByChild('user');
+  var userswatchlistsref = db.ref('userswatchlists');
 
   Vue.use(VueFire);
 
@@ -21,16 +22,25 @@
         genre: ""
       },
       firebase: {
-        watchlists: ref,
-        users: userref
+        watchlists: moviesref,
+        users: userref,
+        userswatchlists: userswatchlistsref
       },
       methods: {
+        orderUsersMovies: function(){
+          var user = firebase.auth().currentUser;
+          var userid = user.uid;
+          usersmovies.equalTo(userid).once('value', function(snapshot){
+            console.log('value', snapshot.val());
+            userswatchlistsref.set(snapshot.val());
+          });
+        },
         addWatchlist: function () {
           var user = firebase.auth().currentUser;
           var userid = user.uid;
 
             if (this.name.trim() && this.genre.trim()) {
-                var newWatchlistKey = ref.push({
+                var newWatchlistKey = moviesref.push({
                     "name": this.name,
                     "genre": this.genre,
                     "movies": 0,
@@ -42,16 +52,20 @@
                 db.ref('users/' + userid).update(updates);
                 this.name = ""
                 this.genre = ""
+                
+                usersmovies.equalTo(userid).once('value', function(snapshot){
+                userswatchlistsref.set(snapshot.val());
+          });
             }
         },
         removeWatchlist: function (key) {
-         ref.child(key).remove();
+         moviesref.child(key).remove();
         },
         updateWatchlist: function(key, id) {
            console.log('hello');
            var title = $('#' + id + ' #newTitle').val();
            if(title != ""){
-             ref.child(key).update({"name": title})
+             moviesref.child(key).update({"name": title})
              $('#' + id + ' #newTitle').css({'display': 'none'});
              $('#' + id + ' #submitNewTitle').css({'display': 'none'});
            }else{
@@ -80,6 +94,7 @@
 
     firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
+      vm.orderUsersMovies();
       console.log('signedin');
     } else {
       console.log('not signedin');
