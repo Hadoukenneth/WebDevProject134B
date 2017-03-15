@@ -12,7 +12,7 @@
   var userref = db.ref('users');
   var userswatchlistsref = db.ref('userswatchlists');
   var currentuserref = db.ref('currentUser');
-    
+
   var currentuser = userref.orderByChild('id');
   var usersmovies = moviesref.orderByChild('user');
 
@@ -40,6 +40,7 @@
           });
         },
         orderUsersMovies: function(){
+          console.log('hello');
           var user = firebase.auth().currentUser;
           var userid = user.uid;
           usersmovies.equalTo(userid).once('value', function(snapshot){
@@ -63,20 +64,22 @@
                 db.ref('users/' + userid).update(updates);
                 this.name = ""
                 this.genre = ""
-                
+
                 usersmovies.equalTo(userid).once('value', function(snapshot){
                 userswatchlistsref.set(snapshot.val());
           });
             }
         },
         removeWatchlist: function (key) {
+         userswatchlistsref.child(key).remove();
          moviesref.child(key).remove();
         },
         updateWatchlist: function(key, id) {
            console.log('hello');
            var title = $('#' + id + ' #newTitle').val();
            if(title != ""){
-             moviesref.child(key).update({"name": title})
+             userswatchlistsref.child(key).update({"name": title});
+             moviesref.child(key).update({"name": title});
              $('#' + id + ' #newTitle').css({'display': 'none'});
              $('#' + id + ' #submitNewTitle').css({'display': 'none'});
            }else{
