@@ -60,7 +60,8 @@ var movies = [
       el: "#createWatchlist",
       data: {
         name: "",
-        genre: ""
+        genre: "",
+        watchlist: ""
       },
       firebase: {
         watchlists: moviesref,
@@ -84,16 +85,16 @@ var movies = [
             userswatchlistsref.set(snapshot.val());
           });
         },
-        addMovieToWatchlist: function (key) {
+        addMovieToWatchlist: function () {
             var updates = {};
-            if (this.name.trim()) {
+            if (this.name.trim() && this.watchlist.trim()) {
                 for(i = 0; i < movies.length; i++) {
                     if(movies[i].title == this.name) {
                         updates['/movies/' + this.name] = movies[i].url;       
                         break;
                     }
                 }
-                db.ref('watchlists/' + key).update(updates);
+                db.ref('watchlists/' + this.watchlist).update(updates);
                 this.name = ""
                 
             }
