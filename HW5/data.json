@@ -1,0 +1,609 @@
+{
+"movies": [
+	{
+		"id": 0,
+		"title": "300",
+		"genre": "action",
+		"rating":"7.7/10",
+		"cast": ["Gerard Butler",
+				 "Lena Headey",
+				 "Michael Fassbender",
+				 "Rodrigo Santoro",
+				 "David Wenham",
+				 "Andrew Pleavin",
+				 "Andrew Tiernan",
+				 "Dominic West"
+				],
+		"year": "2006",
+		"movieDescription": "'King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.' -imdb"
+	},
+	{
+		"id": 1,
+		"title": "Die Hard",
+		"genre": "action",
+		"rating":"8.2/10",		
+		"cast": ["Bruce Willis",
+				 "Alan Rickman",
+				 "Bonnie Bedelia",
+				 "Reginald VelJohnson",
+				 "William Atherton",
+				 "Alexander Godunov",
+				 "Hart Bochner",
+				 "De'voreaux White"
+				],
+		"year": "1988",
+		"movieDescription": "'John McClane, officer of the NYPD, tries to save his wife Holly Gennaro and several others that were taken hostage by German terrorist Hans Gruber during a Christmas party at the Nakatomi Plaza in Los Angeles.' -imdb"
+	},
+	{
+		"id": 2,
+		"title": "Enter The Dragon",
+		"genre": "action",
+		"rating":"7.7/10",		
+		"cast": ["Bruce Lee",
+				 "Jim Kelly",
+				 "John Saxon",
+				 "Bolo Yeung",
+				 "Robert Wall",
+				 "Ahna Capri",
+				 "Shih Kien",
+				 "Angela Mao"
+				],
+		"year": "1973",
+		"movieDescription": "'A martial artist agrees to spy on a reclusive crime lord using his invitation to a tournament there as cover.' -imdb" 
+	},
+	{
+		"id": 3,
+		"title": "Gladiator",
+		"genre": "action",
+		"rating":"8.5/10",		
+		"cast": ["Russell Crowe",
+				 "Connie Nielsen",
+				 "Joaquin Phoenix",
+				 "Oliver Reed",
+				 "Richard Harris",
+				 "Djimon Hounsou",
+				 "Spencer Treat Clark",
+				 "Derek Jacobi"
+				],
+		"year": "2000",
+		"movieDescription": "'When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge.' -imdb" 
+	},
+	{
+		"id": 4,
+		"title": "The Good, the Bad and the Ugly",
+		"genre": "action",
+		"rating":"8.9/10",		
+		"cast": ["Clint Eastwood",
+				 "Eli Wallach",
+				 "Lee Van Cleef",
+				 "Aldo Guiffre",
+				 "Rada Rassimov",
+				 "Luigi Pistilli",
+				 "Mario Brega",
+				 "Antonio Casas"
+				],
+		"year": "1966",
+		"movieDescription": "'A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.' -imdb"
+	},
+	{
+		"id": 5,
+		"title": "Kill Bill Vol. 1",
+		"genre": "action",
+		"rating":"8.1/10",		
+		"cast": ["Uma Thurman",
+				 "David Carradine",
+				 "Daryl Hannah",
+				 "Lucy Liu",
+				 "Michael Madsen",
+				 "Vivica A. Fox",
+				 "Michael Parks",
+				 "Chiaki Kuriyama"
+				],
+		"year": "2003",
+		"movieDescription": "'The Bride wakens from a four-year coma. The child she carried in her womb is gone. Now she must wreak vengeance on the team of assassins who betrayed her - a team she was once part of.' -imdb"
+	},
+	{
+		"id": 6,
+		"title": "The Lord of the Rings The Return of the King",
+		"genre": "action",
+		"rating":"8.8/10",		
+		"cast": ["Elijah Wood",
+				 "Viggo Mortensen",
+				 "Orlando Bloom",
+				 "Ian McKellen",
+				 "Christopher Lee",
+				 "Sean Astin",
+				 "Billy Bean",
+				 "Dominic Monaghan"
+				],
+		"year": "2001",
+		"movieDescription": "'A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle Earth from the Dark Lord Sauron.' -imdb"
+	},
+	{
+		"id": 7,
+		"title": "Predator",
+		"genre": "action",
+		"rating":"7.8/10",		
+		"cast": ["Arnold Schwarzenegger",
+				 "Shane Black",
+				 "Carl Weathers",
+				 "Kevin Peter Hall",
+				 "Jess Ventura",
+				 "Elpidia Carrillo",
+				 "Sonny Landham",
+				 "Bill Duke"
+				],
+		"year": "1987",
+		"movieDescription": "'A team of commandos on a mission in a Central American jungle find themselves hunted by an extraterrestrial warrior.' -imdb"
+	},
+	{
+		"id": 8,
+		"title": "Rambo II",
+		"genre": "action",
+		"rating":"6.4/10",		
+		"cast": ["Sylvester Stallone",
+				 "Richard Crenna",
+				 "Charles Napier",
+				 "Steven Berkoff",
+				 "Julia Nickson",
+				 "Martin Kove",
+				 "George Cheung",
+				 "Andy Wood"
+				],
+		"year": "1982",
+		"movieDescription": "'John Rambo is released from prison by the government for a top-secret covert mission to the last place on Earth he'd want to return - the jungles of Vietnam. ' -imdb"
+	},
+	{
+		"id": 9,
+		"title": "Lion King",
+		"genre": "drama",
+		"rating":"8.5/10",		
+		"cast": ["James Earl Jones",
+				 "Matthew Broderick",
+				 "Nathan Lane",
+				 "Ernie Sabella",
+				 "Whoopi Goldberg",
+				 "Moira Kelly",
+				 "Johnathan Taylor Thomas",
+				 "Jeremy Irons"
+				],
+		"year": "1994",
+		"movieDescription": "'Lion cub and future king Simba searches for his identity. His eagerness to please others and penchant for testing his boundaries sometimes gets him into trouble.' -imdb"
+	},
+	{
+		"id": 10,
+		"title": "Enchanted",
+		"genre": "adventure",
+		"rating":"7.1/10",		
+		"cast": ["Amy Adams",
+				 "Patrick Dempsey",
+				 "James Marsden",
+				 "Idina Menzel",
+				 "Susan Saradon",
+				 "Julie Andrews",
+				 "Timothy Spall",
+				 "Paige O'Hara"
+				],
+		"year": "2007",
+		"movieDescription": "'A young maiden in a land called Andalasia, who is prepared to be wed, is sent away to New York City by an evil queen, where she falls in love with a lawyer.' -imdb"
+	},
+	{
+		"id": 11,
+		"title": "Frozen",
+		"genre": "adventure",
+		"rating":"7.5/10",		
+		"cast": ["Kristen Bell",
+				 "Idina Menzel",
+				 "Josh Gad",
+				 "Jonathan Groff",
+				 "Santino Fontana",
+				 "Alan Tudyk",
+				 "Eva Bella",
+				 "Livvy Stubenrauch"
+				],
+		"year": "2013",
+		"movieDescription": "'When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.' -imdb"
+	},
+	{
+		"id": 12,
+		"title": "I am Legend",
+		"genre": "action",
+		"rating":"7.2/10",		
+		"cast": ["Will Smith",
+				 "Alice Braga",
+				 "Willow Smith",
+				 "Charlie Tahan",
+				 "Dash Mihok",
+				 "Salli Richardson",
+				 "Emma Thompson",
+				 "Marin Ireland"
+				],
+		"year": "2007",
+		"movieDescription": "'Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.' -imdb"
+	},
+	{
+		"id": 13,
+		"title": "Inception",
+		"genre": "action",
+		"rating":"8.8/10",		
+		"cast": ["Leonardo DiCaprio",
+				 "Joseph Gordon-Levitt",
+				 "Ellen Page",
+				 "Tom Hardy",
+				 "Marion Cotillard",
+				 "Cillian Murphy",
+				 "Michael Caine",
+				 "Ken Watanabe"
+				],
+		"year": "2010",
+		"movieDescription": "'A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.' -imdb"
+	},
+	{
+		"id": 14,
+		"title": "Jurassic Park",
+		"genre": "action",
+		"rating":"8.1/10",		
+		"cast": ["Jeff Goldblum",
+				 "Sam Neil",
+				 "Laura Dern",
+				 "Ariana Richards",
+				 "Joseph Mazzelo",
+				 "Richard Attenborough",
+				 "Samuel L. Jackson",
+				 "Wayne Knight"
+				],
+		"year": "1993",
+		"movieDescription": "'During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.' -imdb"
+	},
+	{
+		"id": 15,
+		"title": "Me Before You",
+		"genre": "romance",
+		"rating":"7.5/10",		
+		"cast": ["Emilia Clarke",
+				 "Sam Claflin",
+				 "Matthew Lewis",
+				 "Jenna Coleman",
+				 "Charles Dance",
+				 "Janet McTeer",
+				 "Brendan Coyle",
+				 "Vanessa Kirby"
+				],
+		"year": "2016",
+		"movieDescription": "'A girl in a small town forms an unlikely bond with a recently-paralyzed man she's taking care of.' -imdb"
+	},
+	{
+		"id": 16,
+		"title": "Pocahontas",
+		"genre": "drama",
+		"rating":"6.7/10",		
+		"cast": ["Mel Gibson",
+				 "Christian Bale",
+				 "Irene Bedard",
+				 "Judy Kuhn",
+				 "Linda Hunt",
+				 "Russell Means",
+				 "David Ogden Stiers",
+				 "Billy Connolly"
+				],
+		"year": "1995",
+		"movieDescription": "'An English soldier and the daughter of an Algonquin chief share a romance when English colonists invade seventeenth-century Virginia.' -imdb"
+	},
+	{
+		"id": 17,
+		"title": "Star Wars",
+		"genre": "action",
+		"rating":"8.7/10",		
+		"cast": ["Mark Hamill",
+				 "Harrison Ford",
+				 "Carrie Fisher",
+				 "Peter Mayhew",
+				 "Alec Guinness",
+				 "Anthony Daniels",
+				 "Kenny Baker",
+				 "David Prowse"
+				],
+		"year": "1977",
+		"movieDescription": "'Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the galaxy from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.' -imdb"
+	},
+	{
+		"id": 18,
+		"title": "Tangled",
+		"genre": "adventure",
+		"rating":"7.8/10",		
+		"cast": ["Mandy Moore",
+				 "Zachary Levi",
+				 "Delaney Rose",
+				 "M. C. Gainey",
+				 "Donna Murphy",
+				 "Ron Perlman",
+				 "Brad Garrett",
+				 "Richard Kiel"
+				],
+		"year": "2010",
+		"movieDescription": "'The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.' -imdb"
+	},
+	{
+		"id": 19,
+		"title": "The Help",
+		"genre": "drama",
+		"rating":"8.1/10",		
+		"cast": ["Emma Stone",
+				 "Viola Davis",
+				 "Octavia Spencer",
+				 "Bryce Dallas Howard",
+				 "Jessica Chastain",
+				 "Allison Janney",
+				 "Sissy Spacek",
+				 "Cicely Tyson"
+				],
+		"year": "2011",
+		"movieDescription": "'An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.' -imdb"
+	},
+	{
+		"id": 20,
+		"title": "Incredibles",
+		"genre": "action",
+		"rating":"8.0/10",		
+		"cast": ["Craig T. Nelson",
+				 "Jason Lee",
+				 "Sarah Vowell",
+				 "Spencer Fox",
+				 "Holly Hunter",
+				 "Brad Bird",
+				 "Samuel L. Jackson",
+				 "Elizabeth Pena"
+				],
+		"year": "2004",
+		"movieDescription": "'A family of undercover superheroes, while trying to live the quiet suburban life, are forced into action to save the world.' -imdb"
+	},
+	{
+		"id": 21,
+		"title": "The Theory of Everything",
+		"genre": "drama",
+		"rating":"7.7/10",		
+		"cast": ["Eddie Redmayne",
+				 "Felicity Jones",
+				 "David Thewlis",
+				 "Emily Watson",
+				 "Charlie Cox",
+				 "Simon McBurney",
+				 "Harry Lloyd",
+				 "Maxine Peake"
+				],
+		"year": "2014",
+		"movieDescription": "'A look at the relationship between the famous physicist Stephen Hawking and his wife.' -imdb"
+	},
+	{
+		"id": 22,
+		"title": "The Time Traveler's Wife",
+		"genre": "fantasy",
+		"rating":"7.1/10",		
+		"cast": ["Rachel McAdams",
+				 "Eric Bana",
+				 "Ron Livingston",
+				 "Arliss Howard",
+				 "Jane McLean",
+				 "Brooklyn Proulx",
+				 "Michelle Nolden",
+				 "Alex Ferris"
+				],
+		"year": "2009",
+		"movieDescription": "'A Chicago librarian has a gene that causes him to involuntarily time travel, creating complications in his marriage.' -imdb"
+	},
+	{
+		"id": 23,
+		"title": "Tomorrowland",
+		"genre": "Fantasy",
+		"rating":"6.5/10",
+		"cast": ["George Clooney",
+				 "Britt Robertson",
+				 "Raffrey Cassidy",
+				 "Hugh Laurie",
+				 "Tim McGraw",
+				 "Thomas Robinson",
+				 "Judy Greer",
+				 "Keegan-Michael Key"
+				],
+		"year": "2015",
+		"movieDescription": "'Bound by a shared destiny, a teen bursting with scientific curiosity and a former boy-genius inventor embark on a mission to unearth the secrets of a place somewhere in time and space that exists in their collective memory.' -imdb"
+	},
+	{
+		"id": 24,
+		"title": "Up",
+		"genre": "fantasy",
+		"rating":"8.3/10",		
+		"cast": ["Jordan Nagai",
+				 "Ed Asner",
+				 "Christopher Plummer",
+				 "Bob Peterson",
+				 "Pete Docter",
+				 "Delroy Lindo",
+				 "Elie Docter",
+				 "Josh Cooley"
+				],
+		"year": "2009",
+		"movieDescription": "'Seventy-eight year old Carl Fredricksen travels to Paradise Falls in his home equipped with balloons, inadvertently taking a young stowaway.' -imdb"
+	},
+	{
+		"id": 25,
+		"title": "When a Man Loves a Woman",
+		"genre": "romance",
+		"rating":"6.5/10",
+		"cast": ["Meg Ryan",
+				 "Andy Garcia",
+				 "Tina Majorino",
+				 "Mae Whitman",
+				 "Ellen Burstyb",
+				 "Lauren Tom",
+				 "Eugene Rochie",
+				 "Susanna Thompson"
+				],
+		"year": "1994",
+		"movieDescription": "'An airline pilot and his wife are forced to face the consequences of her alcoholism when her addictions threaten her life and their daughter's safety. While the woman enters detox, her husband must face the truth of his enabling behavior.' -imdb"
+	},
+	{
+		"id": 26,
+		"title": "Avengers Age of Ultron",
+		"genre": "romance",
+		"rating":"6.5/10",
+		"cast": ["Meg Ryan",
+				 "Andy Garcia",
+				 "Tina Majorino",
+				 "Mae Whitman",
+				 "Ellen Burstyb",
+				 "Lauren Tom",
+				 "Eugene Rochie",
+				 "Susanna Thompson"
+				],
+		"year": "1994",
+		"movieDescription": "'An airline pilot and his wife are forced to face the consequences of her alcoholism when her addictions threaten her life and their daughter's safety. While the woman enters detox, her husband must face the truth of his enabling behavior.' -imdb"
+	},
+	{
+		"id": 27,
+		"title": "The Great Gatsby",
+		"genre": "romance",
+		"rating":"6.5/10",
+		"cast": ["Meg Ryan",
+				 "Andy Garcia",
+				 "Tina Majorino",
+				 "Mae Whitman",
+				 "Ellen Burstyb",
+				 "Lauren Tom",
+				 "Eugene Rochie",
+				 "Susanna Thompson"
+				],
+		"year": "1994",
+		"movieDescription": "'An airline pilot and his wife are forced to face the consequences of her alcoholism when her addictions threaten her life and their daughter's safety. While the woman enters detox, her husband must face the truth of his enabling behavior.' -imdb"
+	},
+	{
+		"id": 28,
+		"title": "The Jungle Book",
+		"genre": "romance",
+		"rating":"6.5/10",
+		"cast": ["Meg Ryan",
+				 "Andy Garcia",
+				 "Tina Majorino",
+				 "Mae Whitman",
+				 "Ellen Burstyb",
+				 "Lauren Tom",
+				 "Eugene Rochie",
+				 "Susanna Thompson"
+				],
+		"year": "1994",
+		"movieDescription": "'An airline pilot and his wife are forced to face the consequences of her alcoholism when her addictions threaten her life and their daughter's safety. While the woman enters detox, her husband must face the truth of his enabling behavior.' -imdb"
+	},
+	{
+		"id": 29,
+		"title": "Narnia",
+		"genre": "romance",
+		"rating":"6.5/10",
+		"cast": ["Meg Ryan",
+				 "Andy Garcia",
+				 "Tina Majorino",
+				 "Mae Whitman",
+				 "Ellen Burstyb",
+				 "Lauren Tom",
+				 "Eugene Rochie",
+				 "Susanna Thompson"
+				],
+		"year": "1994",
+		"movieDescription": "'An airline pilot and his wife are forced to face the consequences of her alcoholism when her addictions threaten her life and their daughter's safety. While the woman enters detox, her husband must face the truth of his enabling behavior.' -imdb"
+	},
+	{
+		"id": 30,
+		"title": "Nation Treasure",
+		"genre": "romance",
+		"rating":"6.5/10",
+		"cast": ["Meg Ryan",
+				 "Andy Garcia",
+				 "Tina Majorino",
+				 "Mae Whitman",
+				 "Ellen Burstyb",
+				 "Lauren Tom",
+				 "Eugene Rochie",
+				 "Susanna Thompson"
+				],
+		"year": "1994",
+		"movieDescription": "'An airline pilot and his wife are forced to face the consequences of her alcoholism when her addictions threaten her life and their daughter's safety. While the woman enters detox, her husband must face the truth of his enabling behavior.' -imdb"
+	},
+	{
+		"id": 31,
+		"title": "Peter Pan",
+		"genre": "romance",
+		"rating":"6.5/10",
+		"cast": ["Meg Ryan",
+				 "Andy Garcia",
+				 "Tina Majorino",
+				 "Mae Whitman",
+				 "Ellen Burstyb",
+				 "Lauren Tom",
+				 "Eugene Rochie",
+				 "Susanna Thompson"
+				],
+		"year": "1994",
+		"movieDescription": "'An airline pilot and his wife are forced to face the consequences of her alcoholism when her addictions threaten her life and their daughter's safety. While the woman enters detox, her husband must face the truth of his enabling behavior.' -imdb"
+	},
+	{
+		"id": 32,
+		"title": "Pinocchio",
+		"genre": "romance",
+		"rating":"6.5/10",
+		"cast": ["Meg Ryan",
+				 "Andy Garcia",
+				 "Tina Majorino",
+				 "Mae Whitman",
+				 "Ellen Burstyb",
+				 "Lauren Tom",
+				 "Eugene Rochie",
+				 "Susanna Thompson"
+				],
+		"year": "1994",
+		"movieDescription": "'An airline pilot and his wife are forced to face the consequences of her alcoholism when her addictions threaten her life and their daughter's safety. While the woman enters detox, her husband must face the truth of his enabling behavior.' -imdb"
+	}
+],
+
+"users" : [
+	{
+		"id": 0,
+		"firstname": "Thomas",
+		"lastname": "Powell"
+	},
+	{
+		"id": 1,
+		"firstname": "Lucky",
+		"lastname": "Nguyen"
+	},
+		{
+		"id": 2,
+		"firstname": "Ryan",
+		"lastname": "Weng"
+	},
+	{
+		"id": 3,
+		"firstname": "Kenneth",
+		"lastname": "Vu"
+	}
+],
+
+"watchlists": [
+	{
+		"id" : 0,
+		"watchlistUserId": 0,
+		"movies": 9,
+		"watchlistName": "My Action Playlist",
+		"watchlistDescription" : "What's better than watching explosions as a destresser? There are some classics as well as some newer movies in this playlist.",
+		"watchlistArray": [
+			"The Lord of the Rings The Return of the King",
+			"300",
+			"Die Hard",
+			"Enter the Dragon",
+			"Gladiator",
+			"The Good, the Bad and the Ugly",
+			"Predator",
+			"Rambo II",
+			"Kill Bill Vol. 1"
+		]
+	}
+]
+}

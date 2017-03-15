@@ -28,7 +28,7 @@
     var auth = firebase.auth();
 
     firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
-      window.location = '/explore.html';
+      window.location = '/profile.html';
     },
     function(error) {
       // Handle Errors here.
@@ -72,7 +72,7 @@
           "movies": "",
           "id": user.uid
       });
-      window.location = '/explore.html';
+      window.location = '/profile.html';
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -89,7 +89,7 @@
   firebase.auth().onAuthStateChanged(function(user) {
     if (user && window.location != '/') {
       console.log('signedin');
-      window.location = '/explore.html'
+      window.location = '/profile.html'
 
     } else {
       console.log('not signedin');

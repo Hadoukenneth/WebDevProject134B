@@ -8,6 +8,7 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
+    z-index: 1000;
     background-color: #191A1F;
     color: #FFFFFF;
     height: 30px;
@@ -125,7 +126,8 @@ label.icon{
 }
 
 #email,
-#password{
+#password,
+#username{
     width: 77%;
     border-top: none;
     border-right: none;
@@ -142,6 +144,8 @@ label.icon{
     letter-spacing: 1px;
 }
 
+#username:hover,
+#username:focus,
 #email:hover,
 #password:hover,
 #email:focus,
@@ -218,6 +222,10 @@ label.icon{
 }
 
 /* Profile Page - Lucky */
+#profileWrapper{
+  padding: 0px 0px 200px;
+}
+
 #profileBanner {
     width: 100%;
     background-color: #44929F;
@@ -232,37 +240,32 @@ label.icon{
 #circle {
     border-radius: 50%;
     border: 4px solid #FFFFFF;
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     background-color: #FFFFFF;
-    margin: 20px 0px 0px 50px;
+    /*margin: 20px 0px 0px 50px;*/
+    margin: 0 auto;
     display: block;
-    background-image: url("https://www.zingchart.com/images/thomas-powell-zingchart.png");
+    background-image: url("http://www.chicagobusiness.com/images/icons/default-user-icon.png");
     background-size: cover;
     background-position: 50% 50%;
 }
 
 #profileDescription h1 {
     color: #FFFFFF;
-    float: left;
-    position: relative;
-    line-height: 200px;
+    text-align: center;
     font-family: "Open Sans", sans-serif;
     font-size: 1.6em;
-    padding: 0 20px !important;
-    left: -130px;
 }
 
 #profileDescription button{
   color: #FFFFFF;
-  float: left;
-  position: relative;
   background-color: #015267;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
   padding: 5px 10px;
-  left: -310px;
-  top: 150px;
+  display: block;
+  margin: 0px auto;
   border-radius: 5px;
   border: none;
 }
@@ -377,15 +380,49 @@ label.icon{
 }
 
 /* Explore Page - Ryan */
+#explorePage{
+  margin: 0;
+  padding: 0;
+}
+
 #explore {
     margin-top: -20px;
-    padding-bottom: 150px;
+    padding-bottom: 20px;
     text-align: center;
+}
+
+#movieGallery{
+  padding: 10px 0px 100px;
+}
+
+#movieGallery .movieItem h2{
+  font-size: 15px;
+  text-align: center;
+}
+
+#movieGallery .movieItem{
+  background-color: #FFFFFF;
+  padding: 0px 0px 10px;
+  margin: 10px 0px;
+}
+
+#movieGallery .glyphicon-plus{
+  font-size: 15px !important;
+}
+
+#movieGallery .add{
+  display: block;
+  margin: 10px auto 0px;
+}
+
+#movieGallery .movieItem img{
+  margin: 0 auto;
+  display: block;
 }
 
 #explore input[type="search"] {
     font-size: 15px;
-    color: #FFFFFF;
+    padding: 10px;
     letter-spacing: 1px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -402,33 +439,7 @@ label.icon{
     background-color: #015267;
     border: 1px solid #015267;
     color: #FFFFFF;
-}
-
-#popularCarousel #myCarousel{
-  width: 40%;
-  margin: 0 auto;
-}
-
-#popularCarousel h3{
-  font-size: 2em;
-}
-
-#popularCarousel .carousel-caption h3{
-  background-color: rgba(0,0,0,0.8);
-}
-
-#popularCarousel .carousel-caption {
-  font-size: 1em;
-  right: 10%;
-  left: 60%;
-  top: 30%;
-  bottom: 30%;
-  text-align: left;
-  text-shadow: none;
-}
-
-#popularCarousel .carousel-inner {
-  background-color: #000000;
+    cursor: not-allowed;
 }
 
 #explore .movieListTitle {
@@ -617,12 +628,6 @@ label.icon{
     list-style-type: none;
 }
 
-@media only screen and (max-width: 1080px){
-  #profileDescription h1{
-    left: -10px;
-  }
-}
-
 @media only screen and (max-width: 768px){
   #loginWrapper > section{
     margin: 50px 0;
@@ -634,33 +639,6 @@ label.icon{
 
   #loginRight{
     padding-top: 100px;
-  }
-
-  #profilePicture{
-    margin: auto;
-    float: none;
-  }
-
-  #circle{
-    margin: auto;
-  }
-
-  #profileDescription h1{
-    float: none;
-    text-align: center;
-    line-height: 0px;
-    left: 0;
-  }
-
-  #profileDescription button{
-    float: none;
-    text-align: center;
-    line-height: 0px;
-    left: 0;
-    top: 25px;
-    display: block;
-    margin: 0 auto;
-    padding: 15px 20px;
   }
 
   #recommendedList{

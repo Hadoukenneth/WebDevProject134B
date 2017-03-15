@@ -47,10 +47,10 @@
         <div id="profileBanner">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4" id="profilePicture">
+                    <div class="col-sm-12" id="profilePicture">
                         <span id="circle"></span>
                     </div>
-                    <div class="col-sm-8" id="profileDescription" v-for="user in currentuser">
+                    <div class="col-sm-12" id="profileDescription" v-for="user in currentuser">
                         <h1>{{user.name}}</h1>
                         <button type="button" class="btn btn-primary" data-toggle="modal" onclick="openModal()">
                           Create New WatchList
@@ -110,6 +110,7 @@
                             <button type="button" id="submitNewTitle" style="display:none;" @click="updateWatchlist(watchlist['.key'], index)">SUBMIT</button>
                             <p class="text-center">Genre: {{watchlist.genre}}</p>
                             <p class="text-center text-info">{{watchlist.movies}} movies</p>
+                            <button type="button" class="addMovie" onclick="window.location='/explore.html'"><span class="glyphicon glyphicon-plus"></span> Add Movie</button>
                             <button type="button" class="update" @click="showForm(index)"><span class="glyphicon glyphicon-pencil"></span> Update Title</button>
                             <button class="delete" @click="removeWatchlist(watchlist['.key'])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
                           </div>

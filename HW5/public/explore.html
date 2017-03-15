@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <!-- <script src="js/script.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
         <title>MovieDex | Explore</title>
     </head>
     <body id="explorePage">
@@ -41,131 +41,63 @@
             </div><!-- /.container-fluid -->
         </nav>
 
-        <div class="container-fluid" id="explore">
+        <div id="exploreContent">
+          <div id="explore">
             <!-- Search Bar -->
-            <div id="search" class="row">
-                <form>
-                    <h1>Discover new movies!</h1>
-                    <input type="search">
-                    <button id="searchBtn" type="submit" class="btn btn-default"><strong>Search</strong></button>
-                </form>
-            </div>
-
-            <div id="popularCarousel" style="padding: 50px 0;">
-              <h3>Popular Movies</h3>
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                      </ol>
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                          <a href="movie.html">
-                            <img src="images/gatsby.jpeg" alt="Great Gatsby">
-                            <div class="carousel-caption">
-                              <h3>Great Gatsby</h3>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="movie.html">
-                            <img src="images/narnia.jpeg" alt="Narnia">
-                            <div class="carousel-caption">
-                              <h3>Narnia</h3>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="movie.html">
-                            <img src="images/nationaltreasure.jpeg" alt="National Treasure">
-                            <div class="carousel-caption">
-                              <h3>National Treasure</h3>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-                  </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div id="search">
+                    <form>
+                        <h1>Discover new movies!</h1>
+                        <input type="search">
+                        <button id="searchBtn" type="submit" class="btn btn-default"><strong>Search</strong></button>
+                    </form>
                 </div>
               </div>
             </div>
 
-            <!-- </div> -->
-            <!-- Popular -->
-            <!-- <div id="exploreWatchlists" class="row">
-                <h3>Popular Watchlists</h3>
-                <div class="movielist col-md-4">
-                    <a href="watchlist.html">
-                        <div class="listStacked">
-                            <ul class="posterList">
-                              <li class="poster"><img class="first" src="images/avengers.jpeg" alt="Avengers" width="200" height="300"></li>
-                              <li class="poster"><img class="nth" src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"></li>
-                              <li class="poster"><img class="first" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"></li>
-                              <li class="poster"><img class="nth" src="images/gatsby.jpeg" alt="Great Gatsby" width="200" height="300"></li>
-                            </ul>
-                            <div class="movieListTitle">
-                                <p>Dramas</p>
-                            </div>
-                        </div>
-                    </a>
+            <script id="movie-template" type="text/x-handlebars-template">
+              <div id="movieGallery">
+                <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    {{#each movie}}
+                      {{> moviePartial}}
+                    {{/each}}
+                  </div>
                 </div>
-                <div class="movielist col-md-4">
-                    <a href="watchlist.html">
-                        <div class="listStacked">
-                            <ul class="posterList">
-                                <li class="poster"><img class="first" src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"></li>
-                                <li class="poster"><img class="nth" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"></li>
-                                <li class="poster"><img class="nth" src="images/pinocchio.jpeg" alt="Pinocchio" width="200" height="300"></li>
-                                <li class="poster"><img class="nth" src="images/junglebook.jpeg" alt="Jungle Book" width="200" height="300"></li>
-                            </ul>
-                        </div>
-                        <div class="movieListTitle">
-                            <p>Happiest Place On Earth!</p>
-                        </div>
-                    </a>
+              </div>
+              </div>
+            </script>
+
+            <script id="movie-partial" type="text/x-handlebars-template">
+              <div class="col-lg-3">
+                <div class="movieItem" id="{{id}}">
+                  <h2>{{title}}</h2>
+                  <img src="{{url}}" style="width: 90%; height: 320px;">
+                  <button class="btn btn-primary add" id="{{id}}" type="button" data-target="#movielist-modal"><span class="glyphicon glyphicon-plus"></span> Add to Watchlist</button>
                 </div>
-                <div class="movielist col-md-4">
-                    <a href="watchlist.html">
-                        <div class="listStacked">
-                            <ul class="posterList">
-                                <li class="poster"><img class="first" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"></li>
-                                <li class="poster"><img class="nth" src="images/whitehousedown.jpeg" alt="White House Down" width="200" height="300"></li>
-                                <li class="poster"><img class="nth" src="images/nationaltreasure.jpeg" alt="National Treasure" width="200" height="300"></li>
-                                <li class="poster"><img class="nth" src="images/avengers.jpeg" alt="Avengers" width="200" height="300"></li>
-                            </ul>
-                            <div class="movieListTitle">
-                                <p>Action</p>
-                            </div>
-                        </div>
-                    </a>
+              </div>
+            </script>
+
+            <div id="movielist-modal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
                 </div>
-            </div> -->
-            <!-- Recommended -->
-            <!-- <div id="movieRec" class="row">
-                <h3>Popular Movies</h3>
-                <div>
-                    <a href="movie.html"><img src="images/pinocchio.jpeg" alt="Pinocchio" width="200" height="300"></a>
-                    <a href="movie.html"><img src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"></a>
-                    <a href="movie.html"><img class="first" src="images/avengers.jpeg" alt="Avengers" width="200" height="300"></a>
-                    <a href="movie.html"><img class="nth" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"></a>
-                </div>
-            </div>  -->
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Footer -->
@@ -174,5 +106,6 @@
         </footer>
         <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
         <script src="js/signout.js"></script>
+        <script src="js/explore.js"></script>
     </body>
 </html>
