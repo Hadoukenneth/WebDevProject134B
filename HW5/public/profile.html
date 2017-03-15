@@ -109,11 +109,34 @@
                             <input type="text" id="newTitle" style="display:none;">
                             <button type="button" id="submitNewTitle" style="display:none;" @click="updateWatchlist(watchlist['.key'], index)">SUBMIT</button>
                             <p class="text-center">Genre: {{watchlist.genre}}</p>
-                            <p class="text-center text-info">{{watchlist.movies}} movies</p>
-                            <button type="button" class="addMovie" onclick="window.location='/explore.html'"><span class="glyphicon glyphicon-plus"></span> Add Movie</button>
+                            <button type="button" class="addMovie" data-toggle="modal" onclick="addMovieModal()"><span class="glyphicon glyphicon-plus"></span> Add Movie</button>
                             <button type="button" class="update" @click="showForm(index)"><span class="glyphicon glyphicon-pencil"></span> Update Title</button>
                             <button class="delete" @click="removeWatchlist(watchlist['.key'])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
                           </div>
+                            <div id="addmovie-modal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3>Please only add one of the following movies to your watchlists.</h3>
+                              <p>Avengers Age of Ultron, The Great Gatsy, The Jungle Book, The Lion, The Witch, and The Wardrobe, National Treasure, Peter Pan, Pinnochio</p>
+                          </div>
+                          <div class="modal-body">
+                            <form @submit.prevent="addMovieToWatchlist(watchlist['.key'])">
+                                <div class="form-group">
+                                   <label for="name">Name of Movie:</label>
+                                   <input type="text" class="form-control" id="name" v-model="name">
+                                </div>
+                                 <div class="modal-footer">
+                                   <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                         </div>
                       </div>
                     </div>
@@ -205,6 +228,10 @@
     <script>
         function openModal(){
           $('#myModal').modal('show');
+        }
+        
+        function addMovieModal(){
+          $('#addmovie-modal').modal('show');
         }
         // $('#myModal').modal();
 

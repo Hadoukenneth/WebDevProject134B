@@ -1,3 +1,41 @@
+var movies = [
+	{
+		id: 0,
+		title: "Avengers Age of Ultron",
+        url: "images/avengers.jpeg",
+    },
+	{
+		id: 1,
+		title: "The Great Gatsby",
+        url: "images/gatsby.jpeg",
+	},
+	{
+		id: 2,
+		title: "The Jungle Book",
+        url: "images/junglebook.jpeg",
+    },
+	{
+		id: 3,
+		title: "The Lion, The Witch, and The Wardrobe",
+        url: "images/narnia.jpeg",
+    },
+	{
+		id: 4,
+		title: "National Treasure",
+        url: "images/nationaltreasure.jpeg",
+		},
+	{
+		id: 5,
+		title: "Peter Pan",
+        url: "images/peterpan.jpeg",
+    },
+	{
+		id: 6,
+		title: "Pinocchio",
+        url: "images/pinocchio.jpeg",
+    }
+];
+
 (function(){
   var config = {
     apiKey: "AIzaSyCuaRPCoQegFXgMeIXR2ZSaXaDWu3KukPo",
@@ -40,12 +78,25 @@
           });
         },
         orderUsersMovies: function(){
-          console.log('hello');
           var user = firebase.auth().currentUser;
           var userid = user.uid;
           usersmovies.equalTo(userid).once('value', function(snapshot){
             userswatchlistsref.set(snapshot.val());
           });
+        },
+        addMovieToWatchlist: function (key) {
+            var updates = {};
+            if (this.name.trim()) {
+                for(i = 0; i < movies.length; i++) {
+                    if(movies[i].title == this.name) {
+                        updates['/movies/' + this.name] = movies[i].url;       
+                        break;
+                    }
+                }
+                db.ref('watchlists/' + key).update(updates);
+                this.name = ""
+                
+            }
         },
         addWatchlist: function () {
           var user = firebase.auth().currentUser;
