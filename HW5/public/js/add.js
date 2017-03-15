@@ -10,8 +10,11 @@
   var db = app.database();
   var moviesref = db.ref('watchlists');
   var userref = db.ref('users');
-  var usersmovies = moviesref.orderByChild('user');
   var userswatchlistsref = db.ref('userswatchlists');
+  var currentuserref = db.ref('currentUser');
+    
+  var currentuser = userref.orderByChild('id');
+  var usersmovies = moviesref.orderByChild('user');
 
   Vue.use(VueFire);
 
@@ -24,14 +27,22 @@
       firebase: {
         watchlists: moviesref,
         users: userref,
-        userswatchlists: userswatchlistsref
+        userswatchlists: userswatchlistsref,
+        currentuser: currentuserref
       },
       methods: {
+        displayCurrentUser: function(){
+          var user = firebase.auth().currentUser;
+          var userid = user.uid;
+          currentuser.equalTo(userid).once('value', function(snapshot){
+            console.log('value', snapshot.val());
+            currentuserref.set(snapshot.val());
+          });
+        },
         orderUsersMovies: function(){
           var user = firebase.auth().currentUser;
           var userid = user.uid;
           usersmovies.equalTo(userid).once('value', function(snapshot){
-            console.log('value', snapshot.val());
             userswatchlistsref.set(snapshot.val());
           });
         },
@@ -95,6 +106,7 @@
     firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       vm.orderUsersMovies();
+      vm.displayCurrentUser();
       console.log('signedin');
     } else {
       console.log('not signedin');

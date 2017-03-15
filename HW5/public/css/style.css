@@ -498,13 +498,13 @@ label.icon{
   padding: 10px 0 50px;
 }
 
-#createWatchlist .eachWatchlist{
+#create .eachWatchlist{
   background-color: #FFFFFF;
   margin: 10px 20px;
   padding: 10px;
 }
 
-#createWatchlist button{
+#create button{
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -518,25 +518,25 @@ label.icon{
   margin-bottom: 5px;
 }
 
-#createWatchlist .delete{
+#create .delete{
   background-color: #72243C;
 }
 
-#createWatchlist .update{
+#create .update{
   background-color: #62997A;
 }
 
-#createWatchlist #submitNewTitle{
+#create #submitNewTitle{
   background-color: #000000;
 }
 
-#createWatchlist .glyphicon-pencil:before{
+#create .glyphicon-pencil:before{
   font-size: 1em !important;
   display: inline-block;
   line-height: 10px;
 }
 
-#createWatchlist #newTitle{
+#create #newTitle{
   width: 100%;
   border: 1px solid gray;
 }
