@@ -517,7 +517,8 @@ label.icon{
 
 .moviePoster{
   width: 100px;
-  height: 200px;
+  height: 150px;
+  margin-top: 5px;
 }
 
 #create .actionButton,

@@ -59,7 +59,8 @@ var movies = [
       el: "#createWatchlist",
       data: {
         name: "",
-        genre: ""
+        genre: "",
+				movieName: ""
       },
       firebase: {
         watchlists: moviesref,
@@ -85,17 +86,17 @@ var movies = [
         },
         addMovieToWatchlist: function (key) {
             var updates = {};
-            if (this.name.trim()) {
+            if (this.movieName.trim()) {
                 for(i = 0; i < movies.length; i++) {
-                    if(movies[i].title == this.name) {
-                        updates['/movies/' + this.name.replace(/\s+/g, '')] = movies[i].url;
+                    if(movies[i].title == this.movieName) {
+                        updates['/movies/' + this.movieName.replace(/\s+/g, '')] = movies[i].url;
                         break;
                     }
                 }
                 db.ref('watchlists/' + key).update(updates);
 								db.ref('userswatchlists/' + key).update(updates);
-                this.name = ""
             }
+						this.movieName = "";
         },
         addWatchlist: function () {
           var user = firebase.auth().currentUser;
@@ -112,8 +113,8 @@ var movies = [
                 var updates = {};
                 updates['/movies/' + newWatchlistKey] = true;
                 db.ref('users/' + userid).update(updates);
-                this.name = ""
-                this.genre = ""
+                this.name = "";
+                this.genre = "";
 
                 usersmovies.equalTo(userid).once('value', function(snapshot){
                 userswatchlistsref.set(snapshot.val());

@@ -138,7 +138,7 @@
                                 <form @submit.prevent="addMovieToWatchlist(watchlist['.key'])">
                                     <div class="form-group">
                                         <label for="exampleSelect1">Name of Movie:</label>
-                                        <select class="form-control" id="exampleSelect1" v-model="name">
+                                        <select class="form-control" id="exampleSelect1" v-model="movieName">
                                           <option>Avengers Age of Ultron</option>
                                           <option>National Treasure</option>
                                           <option>Peter Pan</option>
@@ -164,7 +164,7 @@
                               <div class="modal-header">
                                 <div class="hello" v-for="movies in userswatchlists">
                                   <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 text-center">
                                       <img v-if="movies.movies.PeterPan != undefined" class="moviePoster" :src="movies.movies.PeterPan">
                                       <img v-if="movies.movies.TheGreatGatsby!= undefined" class="moviePoster" :src="movies.movies.TheGreatGatsby">
                                       <img v-if="movies.movies.NationalTreasure != undefined" class="moviePoster" :src="movies.movies.NationalTreasure">
