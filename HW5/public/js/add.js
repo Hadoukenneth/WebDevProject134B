@@ -16,7 +16,7 @@ var movies = [
     },
 	{
 		id: 3,
-		title: "The Lion, The Witch, and The Wardrobe",
+		title: "The Lion The Witch and The Wardrobe",
         url: "images/narnia.jpeg",
     },
 	{
@@ -50,7 +50,6 @@ var movies = [
   var userref = db.ref('users');
   var userswatchlistsref = db.ref('userswatchlists');
   var currentuserref = db.ref('currentUser');
-
   var currentuser = userref.orderByChild('id');
   var usersmovies = moviesref.orderByChild('user');
 
@@ -89,13 +88,13 @@ var movies = [
             if (this.name.trim()) {
                 for(i = 0; i < movies.length; i++) {
                     if(movies[i].title == this.name) {
-                        updates['/movies/' + this.name] = movies[i].url;       
+                        updates['/movies/' + this.name.replace(/\s+/g, '')] = movies[i].url;
                         break;
                     }
                 }
                 db.ref('watchlists/' + key).update(updates);
+								db.ref('userswatchlists/' + key).update(updates);
                 this.name = ""
-                
             }
         },
         addWatchlist: function () {

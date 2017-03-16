@@ -511,8 +511,13 @@ label.icon{
 
 #create .eachWatchlist{
   background-color: #FFFFFF;
-  margin: 10px 20px;
+  margin: 10px 0px;
   padding: 10px;
+}
+
+.moviePoster{
+  width: 100px;
+  height: 200px;
 }
 
 #create button{

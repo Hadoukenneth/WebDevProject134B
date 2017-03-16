@@ -42,28 +42,26 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+
         <div id="createWatchlist">
-        <!-- Profile Banner -->
-        <div id="profileBanner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12" id="profilePicture">
-                        <span id="circle"></span>
-                    </div>
-                    <div class="col-sm-12" id="profileDescription" v-for="user in currentuser">
-                        <h1>{{user.name}}</h1>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" onclick="openModal()">
-                          Create New WatchList
-                        </button>
-                        <!-- <button onclick="window.location='createWatchList.html'">Create New Watchlist</button> -->
-                    </div>
-                </div>
+          <!-- Profile Banner -->
+          <div id="profileBanner">
+            <div class="row">
+              <div class="col-sm-12" id="profilePicture">
+                <span id="circle"></span>
+              </div>
+              <div class="col-sm-12" id="profileDescription" v-for="user in currentuser">
+                <h1>{{user.name}}</h1>
+                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="openModal()">
+                  Create New WatchList
+                </button>
+                <!-- <button onclick="window.location='createWatchList.html'">Create New Watchlist</button> -->
+              </div>
             </div>
-        </div>
+          </div>
 
-
-        <!-- Profile Content -->
-        <div id="profileWrapper">
+          <!-- Profile Content -->
+          <div id="profileWrapper">
             <!-- Tab Links-->
             <div class="container">
                 <div class="row">
@@ -74,6 +72,7 @@
                         </ul>
                     </div>
                 </div>
+                <!-- Create Watchlist Modal -->
                 <div id="create">
                   <div class="modal fade" id="myModal">
                     <div class="modal-dialog" role="document">
@@ -100,124 +99,99 @@
                       </div>
                     </div>
                   </div>
+                  <!-- List of Watchlists -->
                   <div class="listOfWatchlists tabs" id="watchlistsSection">
-                    <div class="container">
-                      <div class="row">
-                        <div v-for="(watchlist, index) in userswatchlists">
-                          <div class="col-md-2 eachWatchlist" :id="index">
+                    <div class="row">
+                      <div v-for="(watchlist, index) in userswatchlists">
+                        <div class="col-lg-4 col-lg-12" :id="index">
+                          <div class="eachWatchlist">
                             <h3 class="text-center">{{watchlist.name}}</h3>
                             <input type="text" id="newTitle" style="display:none;">
                             <button type="button" id="submitNewTitle" style="display:none;" @click="updateWatchlist(watchlist['.key'], index)">SUBMIT</button>
                             <p class="text-center">Genre: {{watchlist.genre}}</p>
-                            <button type="button" class="addMovie" data-toggle="modal" onclick="addMovieModal()"><span class="glyphicon glyphicon-plus"></span> Add Movie</button>
-                            <button type="button" class="update" @click="showForm(index)"><span class="glyphicon glyphicon-pencil"></span> Update Title</button>
-                            <button class="delete" @click="removeWatchlist(watchlist['.key'])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
-                          </div>
-                            <div id="addmovie-modal" class="modal fade" role="dialog">
-                      <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h3>Please only add one of the following movies to your watchlists.</h3>
-                              <p>Avengers Age of Ultron, The Great Gatsy, The Jungle Book, The Lion, The Witch, and The Wardrobe, National Treasure, Peter Pan, Pinnochio</p>
-                          </div>
-                          <div class="modal-body">
-                            <form @submit.prevent="addMovieToWatchlist(watchlist['.key'])">
-                                <div class="form-group">
-                                   <label for="name">Name of Movie:</label>
-                                   <input type="text" class="form-control" id="name" v-model="name">
-                                </div>
-                                 <div class="modal-footer">
-                                   <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </form>
+                            <div class="addedMovies">
+                              <div class="row">
+                              </div>
+                            </div>
+                            <div class="buttons">
+                              <button type="button" class="addMovie" data-toggle="modal" onclick="addMovieModal()"><span class="glyphicon glyphicon-plus"></span> Add Movie</button>
+                              <button type="button" class="viewMovies" data-toggle="modal" onclick="viewMoviesModal()"><span class="glyphicon glyphicon-eye-open"></span> View Movies</button>
+                              <button type="button" class="update" @click="showForm(index)"><span class="glyphicon glyphicon-pencil"></span> Update Title</button>
+                              <button class="delete" @click="removeWatchlist(watchlist['.key'])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
+                        <!-- Add Movie Modal -->
+                        <div id="addmovie-modal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3>Please only add one of the following movies to your watchlists.</h3>
+                                  <p>Avengers Age of Ultron, The Great Gatsby, The Jungle Book, The Lion The Witch and The Wardrobe, National Treasure, Peter Pan, Pinocchio</p>
+                              </div>
+                              <div class="modal-body">
+                                <form @submit.prevent="addMovieToWatchlist(watchlist['.key'])">
+                                    <div class="form-group">
+                                       <label for="name">Name of Movie:</label>
+                                       <input type="text" class="form-control" id="name" v-model="name">
+                                    </div>
+                                     <div class="modal-footer">
+                                       <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                        <!-- View Movies Modal -->
+                        <div id="viewmovies-modal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <div class="hello" v-for="movies in userswatchlists">
+                                  <div class="row">
+                                    <div class="col-lg-4">
+                                      <img v-if="movies.movies.PeterPan != undefined" class="moviePoster" :src="movies.movies.PeterPan">
+                                      <img v-if="movies.movies.TheGreatGatsby!= undefined" class="moviePoster" :src="movies.movies.TheGreatGatsby">
+                                      <img v-if="movies.movies.NationalTreasure != undefined" class="moviePoster" :src="movies.movies.NationalTreasure">
+                                      <img v-if="movies.movies.TheLionTheWitchandTheWardrobe != undefined" class="moviePoster" :src="movies.movies.TheLionTheWitchandTheWardrobe">
+                                      <img v-if="movies.movies.Pinocchio != undefined" class="moviePoster" :src="movies.movies.Pinocchio">
+                                      <img v-if="movies.movies.TheJungleBook != undefined" class="moviePoster" :src="movies.movies.TheJungleBook">
+                                      <img v-if="movies.movies.AvengersAgeofUltron != undefined" class="moviePoster" :src="movies.movies.AvengersAgeofUltron">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- Recommended Section -->
                 <div class="col-lg-12 tabs" id="recommendedSection" style="display:none">
-                    <ul id="recommendedList">
-                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"><br>Narnia</a></li>
-                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"><br>Peter Pan</a></li>
-                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/whitehousedown.jpeg" alt="White House Down" width="200" height="300"><br>White House Down</a></li>
-                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/pinocchio.jpeg" alt="Pinocchio" width="200" height="300"><br>Pinocchio</a></li>
-                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/junglebook.jpeg" alt="Jungle Book" width="200" height="300"><br>Jungle Book</a></li>
-                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/gatsby.jpeg" alt="Gatsby" width="200" height="300"><br>Gatsby</a></li>
-                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/avengers.jpeg" alt="Avengers" width="200" height="300"><br>Avengers</a></li>
-                        <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/nationaltreasure.jpeg" alt="National Treasure" width="200" height="300"><br>National Treasure</a></li>
-                    </ul>
+                  <ul id="recommendedList">
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"><br>Narnia</a></li>
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"><br>Peter Pan</a></li>
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/whitehousedown.jpeg" alt="White House Down" width="200" height="300"><br>White House Down</a></li>
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/pinocchio.jpeg" alt="Pinocchio" width="200" height="300"><br>Pinocchio</a></li>
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/junglebook.jpeg" alt="Jungle Book" width="200" height="300"><br>Jungle Book</a></li>
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/gatsby.jpeg" alt="Gatsby" width="200" height="300"><br>Gatsby</a></li>
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/avengers.jpeg" alt="Avengers" width="200" height="300"><br>Avengers</a></li>
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/nationaltreasure.jpeg" alt="National Treasure" width="200" height="300"><br>National Treasure</a></li>
+                  </ul>
                 </div>
-                <!-- <div class="row"> -->
-                    <!-- Recommended -->
-                    <!-- <div class="col-lg-12 tabs" id="recommended">
-                        <ul id="recommendedList">
-                            <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"><br>Narnia</a></li>
-                            <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"><br>Peter Pan</a></li>
-                            <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/whitehousedown.jpeg" alt="White House Down" width="200" height="300"><br>White House Down</a></li>
-                            <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/pinocchio.jpeg" alt="Pinocchio" width="200" height="300"><br>Pinocchio</a></li>
-                            <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/junglebook.jpeg" alt="Jungle Book" width="200" height="300"><br>Jungle Book</a></li>
-                            <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/gatsby.jpeg" alt="Gatsby" width="200" height="300"><br>Gatsby</a></li>
-                            <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/avengers.jpeg" alt="Avengers" width="200" height="300"><br>Avengers</a></li>
-                            <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/nationaltreasure.jpeg" alt="National Treasure" width="200" height="300"><br>National Treasure</a></li>
-                        </ul>
-                    </div>
-                </div> -->
-                <!-- Watchlists -->
-                <!-- <div class="row">
-                    <div class="col-lg-12 tabs" id="watchlists" style="display:none">
-                        <a class="watchlistLink" href="watchlist.html">
-                            <div class="watchlistContent">
-                                <ul class="posterList">
-                                    <li class="poster"><img class="nth" src="images/junglebook.jpeg" alt="Jungle Book" width="150" height="250"></li>
-                                    <li class="poster"><img class="first" src="images/pinocchio.jpeg" alt="Pinocchio" width="150" height="250"></li>
-                                    <li class="poster"><img class="nth" src="images/gatsby.jpeg" alt="Great Gatsby" width="150" height="250"></li>
-                                    <li class="poster"><img class="first" src="images/peterpan.jpeg" alt="Peter Pan" width="150" height="250"></li>
-                                </ul>
-                                <div class="watchlistDescription">
-                                    <p>Love is in the Air</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="watchlistLink" href="watchlist.html">
-                            <div class="watchlistContent">
-                                <ul class="posterList">
-                                    <li class="poster"><img class="first" src="images/peterpan.jpeg" alt="Peter Pan" width="150" height="250"></li>
-                                    <li class="poster"><img class="nth" src="images/narnia.jpeg" alt="Narnia" width="150" height="250"></li>
-                                    <li class="poster"><img class="first" src="images/pinocchio.jpeg" alt="Pinocchio" width="150" height="250"></li>
-                                    <li class="poster"><img class="nth" src="images/junglebook.jpeg" alt="Jungle Book" width="150" height="250"></li>
-                                </ul>
-                                <div class="watchlistDescription">
-                                    <p>Disney Marathon</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="watchlistLink" href="watchlist.html">
-                            <div class="watchlistContent">
-                                <ul class="posterList">
-                                    <li class="poster"><img class="first" src="images/narnia.jpeg" alt="Narnia" width="150" height="250"></li>
-                                    <li class="poster"><img class="nth" src="images/pinocchio.jpeg" alt="Pinocchio" width="150" height="250"></li>
-                                    <li class="poster"><img class="first" src="images/whitehousedown.jpeg" alt="White House Down" width="150" height="250"></li>
-                                    <li class="poster"><img class="nth" src="images/nationaltreasure.jpeg" alt="National Treasure" width="150" height="250"></li>
-                                </ul>
-                                <div class="watchlistDescription">
-                                    <p>Adventurous</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div> -->
             </div>
         </div>
-        </div>
-
-
+      </div>
 
         <!-- Footer -->
         <footer>
@@ -229,11 +203,14 @@
         function openModal(){
           $('#myModal').modal('show');
         }
-        
+
         function addMovieModal(){
           $('#addmovie-modal').modal('show');
         }
-        // $('#myModal').modal();
+
+        function viewMoviesModal(){
+          $('#viewmovies-modal').modal('show');
+        }
 
         function changeTabs(evt, tabName) {
             var i, x, tablinks;
