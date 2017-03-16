@@ -3,19 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="MovieDex Profile">
+        <meta name="description" content="MovieDex Team">
         <meta name="author" content="CSE 134B TEAM">
+        <!-- Custom Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- JQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <title>MovieDex | Profile</title>
-        <!-- CRUD -->
+        <!-- Firebase -->
         <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <!-- Vue -->
         <script src="https://unpkg.com/vue"></script>
         <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+        <title>MovieDex | Profile</title>
     </head>
     <body id="profilePage">
         <!-- Navigation Bar -->
@@ -53,7 +57,7 @@
               <div class="col-sm-12" id="profileDescription" v-for="user in currentuser">
                 <h1>{{user.name}}</h1>
                 <button type="button" class="btn btn-primary" data-toggle="modal" onclick="openModal()">
-                  Create New WatchList
+                  Create New Watchlist
                 </button>
                 <!-- <button onclick="window.location='createWatchList.html'">Create New Watchlist</button> -->
               </div>
@@ -92,7 +96,7 @@
                             </div>
                              <div class="modal-footer">
                                <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                               <button type="button" class="closeBtn" data-dismiss="modal">Close</button>
                             </div>
                           </form>
                         </div>
@@ -106,18 +110,18 @@
                         <div class="col-lg-4 col-lg-12" :id="index">
                           <div class="eachWatchlist">
                             <h3 class="text-center">{{watchlist.name}}</h3>
-                            <input type="text" id="newTitle" style="display:none;">
-                            <button type="button" id="submitNewTitle" style="display:none;" @click="updateWatchlist(watchlist['.key'], index)">SUBMIT</button>
+                            <input type="text" id="newTitle" style="display:none;" placeholder="New Title">
+                            <button type="button" id="submitNewTitle" style="display:none;" @click="updateWatchlist(watchlist['.key'], index)"><span class="glyphicon glyphicon-ok"></span>SUBMIT</button>
                             <p class="text-center">Genre: {{watchlist.genre}}</p>
                             <div class="addedMovies">
                               <div class="row">
                               </div>
                             </div>
                             <div class="buttons">
-                              <button type="button" class="addMovie" data-toggle="modal" onclick="addMovieModal()"><span class="glyphicon glyphicon-plus"></span> Add Movie</button>
-                              <button type="button" class="viewMovies" data-toggle="modal" onclick="viewMoviesModal()"><span class="glyphicon glyphicon-eye-open"></span> View Movies</button>
-                              <button type="button" class="update" @click="showForm(index)"><span class="glyphicon glyphicon-pencil"></span> Update Title</button>
-                              <button class="delete" @click="removeWatchlist(watchlist['.key'])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
+                              <button type="button" class="actionButton addMovie" data-toggle="modal" onclick="addMovieModal()"><span class="glyphicon glyphicon-plus"></span> Add Movie</button>
+                              <button type="button" class="actionButton viewMovies" data-toggle="modal" onclick="viewMoviesModal()"><span class="glyphicon glyphicon-eye-open"></span> View Movies</button>
+                              <button type="button" class="actionButton update" @click="showForm(index)"><span class="glyphicon glyphicon-pencil"></span> Update Title</button>
+                              <button class="actionButton delete" @click="removeWatchlist(watchlist['.key'])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
                             </div>
                           </div>
                         </div>
@@ -127,19 +131,26 @@
                             <!-- Modal content-->
                             <div class="modal-content">
                               <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h3>Please only add one of the following movies to your watchlists.</h3>
                                   <p>Avengers Age of Ultron, The Great Gatsby, The Jungle Book, The Lion The Witch and The Wardrobe, National Treasure, Peter Pan, Pinocchio</p>
                               </div>
                               <div class="modal-body">
                                 <form @submit.prevent="addMovieToWatchlist(watchlist['.key'])">
                                     <div class="form-group">
-                                       <label for="name">Name of Movie:</label>
-                                       <input type="text" class="form-control" id="name" v-model="name">
-                                    </div>
+                                        <label for="exampleSelect1">Name of Movie:</label>
+                                        <select class="form-control" id="exampleSelect1" v-model="name">
+                                          <option>Avengers Age of Ultron</option>
+                                          <option>National Treasure</option>
+                                          <option>Peter Pan</option>
+                                          <option>Pinocchio</option>
+                                          <option>The Great Gatsby</option>
+                                          <option>The Jungle Book</option>
+                                          <option>The Lion The Witch and The Wardrobe</option>
+                                        </select>
+                                      </div>
                                      <div class="modal-footer">
                                        <input type="submit" class="form-control btn btn-primary btn-md" id="submit">
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      <button type="button" class="closeBtn" data-dismiss="modal">Close</button>
                                     </div>
                                 </form>
                               </div>
@@ -179,7 +190,7 @@
                 <!-- Recommended Section -->
                 <div class="col-lg-12 tabs" id="recommendedSection" style="display:none">
                   <ul id="recommendedList">
-                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"><br>Narnia</a></li>
+                      <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/narnia.jpeg" alt="Narnia" width="200" height="300"><br>The Lion The Witch and The Wardrobe</a></li>
                       <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/peterpan.jpeg" alt="Peter Pan" width="200" height="300"><br>Peter Pan</a></li>
                       <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/whitehousedown.jpeg" alt="White House Down" width="200" height="300"><br>White House Down</a></li>
                       <li class="recommendedItem"><a href="movie.html"><img class="singleMovie" src="images/pinocchio.jpeg" alt="Pinocchio" width="200" height="300"><br>Pinocchio</a></li>

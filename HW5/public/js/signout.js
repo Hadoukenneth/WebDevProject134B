@@ -12,7 +12,6 @@
   var btnLogout = document.getElementById('signout');
 
   btnLogout.addEventListener('click', function(){
-    // firebase.auth().signOut();
     firebase.auth().signOut().then(function() {
       console.log('log out');
       window.location = '/';
@@ -21,18 +20,11 @@
     });
   });
 
-
-
   firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    console.log('signedin');
-  } else {
-    console.log('not signedin');
-  }
-});
-
-$('.carousel').carousel()
-
-
-
+    if (user) {
+      console.log('signedin');
+    } else {
+      console.log('not signedin');
+    }
+  });
 }());

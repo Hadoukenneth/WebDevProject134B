@@ -61,7 +61,7 @@ footer {
 
 #loginWrapper #loginRight {
     position: relative;
-    bottom: 150px;
+    bottom: 100px;
     margin-left: 10px;
 }
 
@@ -520,7 +520,8 @@ label.icon{
   height: 200px;
 }
 
-#create button{
+#create .actionButton,
+#create #submitNewTitle{
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -532,18 +533,38 @@ label.icon{
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: #222222;
 }
 
 #create .delete{
-  background-color: #72243C;
+  color: #c90a10;
 }
 
-#create .update{
-  background-color: #62997A;
-}
-
+#create .update,
 #create #submitNewTitle{
-  background-color: #000000;
+  color: #68d78d;
+}
+
+#create .viewMovies{
+  color: #ffb014;
+}
+
+#create .addMovie{
+  color: #45c3e5;
+}
+
+#create .closeBtn{
+  border: none;
+  text-align: center;
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #222222;
+  width: 100%;
+  margin-top: 5px;
+  padding: 6px;
+  border-radius: 5px;
+  margin-left: 0px;
+  font-size: 14px;
 }
 
 #create .glyphicon-pencil:before{
