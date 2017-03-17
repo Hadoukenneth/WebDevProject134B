@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="MovieDex Movie Detail">
+        <meta name="author" content="CSE 134B TEAM">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Roboto+Condensed" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <title>MovieDex | Movie</title>
+    </head>
+    <body class="theBody">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#moviedex-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="explore.html">MovieDex</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="moviedex-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="explore.html">explore</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                        <li><a href="team.html">about us</a></li>
+                        <li><a id="signout" href="index.html">sign out</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container" id="movieDescription">
+            <div class="row">
+                <!-- Movie Description -->
+                <div class="col-md-6">
+                    <h1 v-model="name">Avengers Age of Ultron</h1>
+                    <button type="button" class="btn btn-success">Add Movie to Watchlist</button>
+                    <h3>7.4/10</h3>
+                    <p>"When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's Mightiest Heroes to stop the villainous Ultron from enacting his terrible plans." -imdb</p>
+                    <p>Cast:</p>
+                    <ul class="cast">
+                        <li>Robert Downey Jr.</li>
+                        <li>Chris Evans</li>
+                        <li>Scarlett Johansson</li>
+                        <li>Chris Hemsworth</li>
+                        <li>Jeremy Renner</li>
+                        <li>Mark Ruffalo</li>
+						<li>Elizabeth Olsen</li>
+                        <li>James Spader</li>
+                    </ul>
+                </div>
+                <!-- Movie Image -->
+                <div class="col-md-6">
+                    <h2>Movie Poster</h2>
+                    <figure>
+                        <img src="images/avengers.jpeg" alt="Avengers: Age of Ultron" v-model="poster">
+                        <figcaption>Avengers Age of Ultron © 2015</figcaption>
+                    </figure>
+                    <!--Button to Watchlist-->
+                    <a href="watchlist.html" v-on:click="addToMovieList"><button id="addToPlaylistButton">Add to watchlist</button></a>
+                </div>
+            </div>
+        </div>
+
+		<!--
+        <div v-for="movielist in movielists">
+            <img :src="movielist.poster" class="img-responsive" alt="Responsive image" style="padding: 20px">
+            <h3 class="text-center">{{movielist.name}}</h3>
+        </div>
+		-->
+		
+        <!-- Footer -->
+        <footer>
+            <p>Copyright MovieDex 2017</p>
+        </footer>
+    </body>
+</html>
