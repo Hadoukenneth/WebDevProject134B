@@ -19,7 +19,7 @@ footer {
     box-sizing: border-box;
 }
 
-/* Login Page - Lucky */
+/* Login Page */
 #navRibbon {
     position: fixed;
     top: 0;
@@ -181,7 +181,6 @@ label.icon{
     letter-spacing: 1px;
     border: 1px solid #DD4B39;
     color: #FFFFFF;
-
 }
 
 #createAcc:hover,
@@ -221,7 +220,7 @@ label.icon{
     left: auto;
 }
 
-/* Profile Page - Lucky */
+/* Profile Page */
 #profileWrapper{
   padding: 0px 0px 200px;
 }
@@ -243,10 +242,9 @@ label.icon{
     width: 120px;
     height: 120px;
     background-color: #FFFFFF;
-    /*margin: 20px 0px 0px 50px;*/
     margin: 0 auto;
     display: block;
-    background-image: url("http://www.chicagobusiness.com/images/icons/default-user-icon.png");
+    background-image: url("../images/userIcon.png");
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -379,7 +377,7 @@ label.icon{
     color: #FFD700;
 }
 
-/* Explore Page - Ryan */
+/* Explore Page */
 #explorePage{
   margin: 0;
   padding: 0;
@@ -389,35 +387,6 @@ label.icon{
     margin-top: -20px;
     padding-bottom: 20px;
     text-align: center;
-}
-
-#movieGallery{
-  padding: 10px 0px 100px;
-}
-
-#movieGallery .movieItem h2{
-  font-size: 15px;
-  text-align: center;
-}
-
-#movieGallery .movieItem{
-  background-color: #FFFFFF;
-  padding: 0px 0px 10px;
-  margin: 10px 0px;
-}
-
-#movieGallery .glyphicon-plus{
-  font-size: 15px !important;
-}
-
-#movieGallery .add{
-  display: block;
-  margin: 10px auto 0px;
-}
-
-#movieGallery .movieItem img{
-  margin: 0 auto;
-  display: block;
 }
 
 #explore input[type="search"] {
@@ -504,6 +473,10 @@ label.icon{
     padding-bottom: 120px;
 }
 
+#exploreWatchlistPicture{
+  padding: 20px 0 50px;
+}
+
 /* Create Watch List */
 .listOfWatchlists{
   padding: 10px 0 50px;
@@ -578,7 +551,8 @@ label.icon{
   width: 100%;
   border: 1px solid gray;
 }
-/* Team Page - Ryan */
+
+/* Team Page */
 #team {
     text-align: center;
 }
@@ -658,21 +632,21 @@ label.icon{
 
 .movieImg {
 	margin-top:10px;
-	margin-right:10px; 
-	margin-left:10px; 
-	margin-bottom:10px; 
+	margin-right:10px;
+	margin-left:10px;
+	margin-bottom:10px;
 }
 
 .watchlistItemBackground {
 	background-color: #FFFFFF;
 	margin-top:10px;
-	margin-right:10px; 
-	margin-left:10px; 
-	margin-bottom:10px; 
+	margin-right:10px;
+	margin-left:10px;
+	margin-bottom:10px;
 }
 
-.top-buffer { 
-	margin-top:40px; 
+.top-buffer {
+	margin-top:40px;
 }
 
 .cast {
