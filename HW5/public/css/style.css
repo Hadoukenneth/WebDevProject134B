@@ -624,6 +624,30 @@ label.icon{
 	border-radius: 5px;
 }
 
+.watchlistMovieTitle {
+	font-family: "Open Sans", sans-serif;
+    color: #191A1F;
+}
+
+.movieImg {
+	margin-top:10px;
+	margin-right:10px; 
+	margin-left:10px; 
+	margin-bottom:10px; 
+}
+
+.watchlistItemBackground {
+	background-color: #FFFFFF;
+	margin-top:10px;
+	margin-right:10px; 
+	margin-left:10px; 
+	margin-bottom:10px; 
+}
+
+.top-buffer { 
+	margin-top:40px; 
+}
+
 .cast {
     list-style-type: none;
 }
