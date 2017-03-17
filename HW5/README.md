@@ -62,17 +62,17 @@ We used Firebase as our backend data storage in our application to perform CRUD 
 * DELETE is executed on following features:
 * Delete an entire watchlist from the user's profile.
 
-### Bootstrap TODO
+### Bootstrap
 > http://getbootstrap.com/
 
+Bootstrap offered ways for us to quickly create grids and modals, implement forms, and access to pre-made icons. We found
+that the tradeoff to extra file space was worth quickly building this application.
 
-### jQuery TODO
+### jQuery
 > https://jquery.com/
 
-jQuery was utilized for some quicker targeting and access to some shortcut methods just to simplify the lives of the developers. While we initially started out in pure javascript with writing our own functions, we found that the tradeoff to the extra file space was worth some ease of coding at this scale.
-
-## Validation TODO
-
+jQuery was utilized for some faster targeting and access to elements on the document. It also provided
+build in functions that offered an easy learning curve for all of us. We found that the tradeoff to the extra file space was worth the ease of coding to meet the deadline of the application.
 
 ## Known Issues
 
